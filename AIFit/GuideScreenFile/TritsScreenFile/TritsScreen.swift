@@ -195,7 +195,7 @@ struct TritsScreen: View {
                                                 .foregroundColor(Color(.white))
                                                 .padding(.trailing,10)
                                             Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding(.leading,26)
                                     }
                                 })
                             })

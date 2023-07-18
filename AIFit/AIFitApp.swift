@@ -10,9 +10,12 @@ import UIKit
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    var isCompletedDays: [Bool] = UserDefaults.standard.array(forKey: "isCompletedDays") as? [Bool] ?? [false, false, false, false, false, false, false]
     var days = UserDefaults.standard.integer(forKey: "nextday")
     let mainCh = MainPage()
+    @AppStorage("checkDay") var checkday: Int = 0
     @AppStorage("waterCounter") var counter: Int = 0
+    @AppStorage("incDay") var hasIncrementedCheckday: Bool = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         scheduleRefreshWhenDayChanges()
@@ -20,17 +23,22 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     private func scheduleRefreshWhenDayChanges() {
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshDaysAndCommits), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshDaysAndCommits), name: .NSCalendarDayChanged, object: nil)
     }
     
     @objc private func refreshDaysAndCommits() {
         if mainCh.challenge || mainCh.challenge1 || mainCh.challenge2 || mainCh.challenge3 || mainCh.challenge4 {
+            if days+1 == 7 {
+                isCompletedDays = [false,false,false,false,false,false,false]
+                UserDefaults.standard.set(isCompletedDays,forKey:"isCompletedDays")
+            }
             if(days+1 < 7){
                 days += 1
+                UserDefaults.standard.set(false, forKey: "incDay")
                 UserDefaults.standard.set(days, forKey: "nextday")
             }else{
-                days = 0
-                UserDefaults.standard.set(days, forKey: "nextday")
+                UserDefaults.standard.set(0,forKey: "checkDay")
+                UserDefaults.standard.set(0, forKey: "nextday")
                 mainCh.challenge = false
                 mainCh.challenge1 = false
                 mainCh.challenge2 = false
@@ -44,6 +52,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             }
         }else{
             days = 0
+            UserDefaults.standard.set(false, forKey: "incDay")
             UserDefaults.standard.set(days, forKey: "nextday")
         }
         UserDefaults.standard.set(0,forKey: "waterCounter")

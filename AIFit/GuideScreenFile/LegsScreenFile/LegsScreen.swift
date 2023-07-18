@@ -66,7 +66,7 @@ struct LegsScreen: View {
                                                 .foregroundColor(Color(.white))
                                                 .padding(.trailing,43)
                                             Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding(.leading,30)
                                     }
                                 })
                             })

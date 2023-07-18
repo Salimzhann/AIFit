@@ -205,8 +205,8 @@ struct MainPage: View {
                                         .bold()
                                     Text("Посветите себя борьбе с лишним весом")
                                         .font(.system(size: 18))
-                                        .padding(.horizontal, 20)
-                                        .padding(.trailing, 100)
+                                        .padding(.horizontal, 16)
+                                        .padding(.trailing, 110)
                                         .padding(.bottom, 1)
                                         .foregroundColor(.white)
                                     Button(action:{

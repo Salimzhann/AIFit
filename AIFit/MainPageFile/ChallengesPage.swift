@@ -4,18 +4,19 @@
 //
 //  Created by Manas Salimzhan on 09.07.2023.
 //
-
 import Combine
 import SwiftUI
 
 struct Challenges: View {
     @AppStorage("checkDay") var checkday: Int = 0
     @AppStorage("nextday") var days: Int = 0
-    var null = MainPage()
+    @AppStorage("incDay") var hasIncrementedCheckday: Bool = false
+    @State var null = MainPage()
     @State var titles: String
     @State var sd:  CGFloat
     @State var isCompletedDays: [Bool] = UserDefaults.standard.array(forKey: "isCompletedDays") as? [Bool] ?? [false, false, false, false, false, false, false]
     @State private var cancellables = Set<AnyCancellable>()
+    @State private var isPulsating = false // New state variable
     
     var body: some View {
         ZStack {
@@ -45,19 +46,23 @@ struct Challenges: View {
                     
                     HStack {
                         ForEach(0..<7) { index in
+                            let shouldPulsate = !isCompletedDays[index] && isPulsating && index == days
                             circles(prog: index + 1)
                                 .foregroundColor(isCompletedDays[index] ? .blue : Color(.darkGray))
+                                .scaleEffect(shouldPulsate ? 1.2 : 1.0) // Apply scale effect conditionally
+                                .animation(shouldPulsate ? Animation.easeInOut(duration: 1.0).repeatForever() : .default) // Add animation conditionally
                         }
                     }
                 }
                 
                 Button(action: {
-                    print(isCompletedDays[days])
-                    print(days)
                     isCompletedDays[days] = true
-                    print(isCompletedDays[days])
-                    print(days)
                     UserDefaults.standard.set(isCompletedDays, forKey: "isCompletedDays")
+                    if isCompletedDays[days] && !hasIncrementedCheckday {
+                        checkday += 1
+                        UserDefaults.standard.set(true ,forKey: "incDay")
+                        UserDefaults.standard.set(checkday, forKey: "checkDay")
+                    }
                 }, label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 17)
@@ -68,19 +73,14 @@ struct Challenges: View {
                             .foregroundColor(.black)
                         
                     }
-                    
                 })
             }
         }
         .onAppear {
-            if !null.challenge || !null.challenge1 || !null.challenge2 || !null.challenge3 || !null.challenge4 {
-                isCompletedDays = [false, false, false, false, false, false, false]
-                UserDefaults.standard.set(isCompletedDays,forKey: "isCompletedDays")
-            }
-            if isCompletedDays[days] == true {
-                checkday += 1
-                UserDefaults.standard.set(checkday, forKey: "checkDay")
-            }
+            isPulsating = true // Start the pulsating animation when the view appears
+        }
+        .onDisappear {
+            isPulsating = false // Stop the pulsating animation when the view disappears
         }
     }
 }
@@ -98,4 +98,3 @@ struct circles: View {
         }
     }
 }
-

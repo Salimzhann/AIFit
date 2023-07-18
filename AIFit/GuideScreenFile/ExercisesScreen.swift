@@ -42,6 +42,7 @@ struct ExercisesScreen: View {
                                     }.padding(.leading,36)
                                 }
                                 .padding(.top, 20)
+                                .padding(.horizontal,16)
                             })
                         })
                         
@@ -68,6 +69,7 @@ struct ExercisesScreen: View {
                                             .padding(.trailing,43)
                                         Spacer()
                                     }.padding(.leading,36)
+                                        .padding(.horizontal,16)
                                 }
                             })
                         })
@@ -94,6 +96,7 @@ struct ExercisesScreen: View {
                                             .padding(.trailing,43)
                                         Spacer()
                                     }.padding(.leading,36)
+                                        .padding(.horizontal,16)
                                 }
                             })
                         })
@@ -120,6 +123,7 @@ struct ExercisesScreen: View {
                                             .padding(.trailing,43)
                                         Spacer()
                                     }.padding(.leading,36)
+                                        .padding(.horizontal,16)
                                 }
                             })
                         })
@@ -145,6 +149,7 @@ struct ExercisesScreen: View {
                                             .padding(.trailing,43)
                                         Spacer()
                                     }.padding(.leading,36)
+                                        .padding(.horizontal,16)
                                 }
                             })
                         })
@@ -170,6 +175,7 @@ struct ExercisesScreen: View {
                                             .padding(.trailing,43)
                                         Spacer()
                                     }.padding(.leading,36)
+                                        .padding(.horizontal,16)
                                 }
                             })
                         })

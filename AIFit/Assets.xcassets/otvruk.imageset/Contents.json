@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "razved-na-bloke-best_30192219cf06c7ca6b1d7c322b08af2f.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -41,6 +41,8 @@
 		194FBCA92A31B8FF007F3FF3 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */; };
 		194FBCAB2A31BA3A007F3FF3 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */; };
 		194FBCB32A32D7F2007F3FF3 /* ExercisesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCB22A32D7F1007F3FF3 /* ExercisesScreen.swift */; };
+		1956120A2A67AA66008DA8D1 /* ChatMessages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 195612082A67AA66008DA8D1 /* ChatMessages.xcdatamodeld */; };
+		195612142A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195612132A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift */; };
 		195858702A5C2D2200A10E4D /* ResizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958586F2A5C2D2200A10E4D /* ResizableTextView.swift */; };
 		195858722A5C302E00A10E4D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195858712A5C302E00A10E4D /* Message.swift */; };
 		195858742A5C324400A10E4D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195858732A5C324400A10E4D /* MessageView.swift */; };
@@ -133,6 +135,8 @@
 		194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		194FBCB22A32D7F1007F3FF3 /* ExercisesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesScreen.swift; sourceTree = "<group>"; };
+		195612092A67AA66008DA8D1 /* ChatMessages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatMessages.xcdatamodel; sourceTree = "<group>"; };
+		195612132A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatMessageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1958586F2A5C2D2200A10E4D /* ResizableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableTextView.swift; sourceTree = "<group>"; };
 		195858712A5C302E00A10E4D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		195858732A5C324400A10E4D /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 		194FBC702A319626007F3FF3 = {
 			isa = PBXGroup;
 			children = (
+				195612132A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift */,
 				194FBC7B2A319626007F3FF3 /* AIFit */,
 				194FBC8C2A319628007F3FF3 /* AIFitTests */,
 				194FBC962A319628007F3FF3 /* AIFitUITests */,
@@ -322,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */,
+				195612082A67AA66008DA8D1 /* ChatMessages.xcdatamodeld */,
 				195858712A5C302E00A10E4D /* Message.swift */,
 				195858732A5C324400A10E4D /* MessageView.swift */,
 				195858752A5C325200A10E4D /* User.swift */,
@@ -564,6 +570,7 @@
 				192D84592A459F38009B2101 /* jimSmitaScreen.swift in Sources */,
 				1913A2232A5F9F6C0092F12A /* RazgipvN.swift in Sources */,
 				19AE6DD92A44969600D027D6 /* shragiScreen.swift in Sources */,
+				1956120A2A67AA66008DA8D1 /* ChatMessages.xcdatamodeld in Sources */,
 				197B02C32A5EDEE000524BB2 /* Jeff.swift in Sources */,
 				1900D4442A432B5B009EF595 /* ShoulderScreen.swift in Sources */,
 				19AE6DE22A4532D200D027D6 /* ZottmanScreen.swift in Sources */,
@@ -577,6 +584,7 @@
 				194FBC7F2A319626007F3FF3 /* ContentView.swift in Sources */,
 				192D845D2A45ACEA009B2101 /* VypadyvpScreen.swift in Sources */,
 				194FBCB32A32D7F2007F3FF3 /* ExercisesScreen.swift in Sources */,
+				195612142A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift in Sources */,
 				19AE6DCA2A44665800D027D6 /* mahiScreen.swift in Sources */,
 				19185E8C2A5EA44500AD72F4 /* armZhim.swift in Sources */,
 				192D84552A459A6A009B2101 /* LegsScreen.swift in Sources */,
@@ -970,6 +978,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		195612082A67AA66008DA8D1 /* ChatMessages.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				195612092A67AA66008DA8D1 /* ChatMessages.xcdatamodel */,
+			);
+			currentVersion = 195612092A67AA66008DA8D1 /* ChatMessages.xcdatamodel */;
+			path = ChatMessages.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 194FBC712A319626007F3FF3 /* Project object */;
 }

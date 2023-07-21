@@ -39,8 +39,7 @@ struct TritsScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }
                                     }
                                 })
                             })
@@ -64,9 +63,7 @@ struct TritsScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,3)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }
                                     }
                                 })
                             })
@@ -90,9 +87,7 @@ struct TritsScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,30)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding(.trailing,20)
                                     }
                                 })
                             })
@@ -116,9 +111,7 @@ struct TritsScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,43)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding(.trailing,14)
                                     }
                                 })
                             })
@@ -142,9 +135,7 @@ struct TritsScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,80)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -164,13 +155,11 @@ struct TritsScreen: View {
                                             .frame(width: 350, height: 100)
                                             .cornerRadius(20)
                                         HStack{
-                                            Text("Oбратные отжимания")
+                                            Text("Oбратные \n отжимания")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,10)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -189,13 +178,11 @@ struct TritsScreen: View {
                                             .frame(width: 350, height: 100)
                                             .cornerRadius(20)
                                         HStack{
-                                            Text("Pазгибание штанги из за головы")
+                                            Text("Pазгибание штанги\n из за головы")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,10)
-                                            Spacer()
-                                        }.padding(.leading,26)
+                                        }.padding()
                                     }
                                 })
                             })

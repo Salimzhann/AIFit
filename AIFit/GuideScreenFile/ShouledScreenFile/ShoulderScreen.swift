@@ -18,8 +18,6 @@ struct ShoulderScreen: View {
                     .edgesIgnoringSafeArea(.all)
             ScrollView{
                 VStack{
-                   
-                        VStack{
                             Button(action: {
                                 
                             }, label: {
@@ -35,12 +33,11 @@ struct ShoulderScreen: View {
                                             .frame(width: 350, height: 100)
                                             .cornerRadius(20)
                                         HStack{
-                                            Text("Жим гантелей сидя")
+                                            Text("Жим гантелей \nсидя")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                            Spacer()
-                                        }.padding(.leading,30)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -64,9 +61,7 @@ struct ShoulderScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,43)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -90,9 +85,7 @@ struct ShoulderScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,43)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -116,9 +109,7 @@ struct ShoulderScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,43)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -142,9 +133,7 @@ struct ShoulderScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,10)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -167,9 +156,7 @@ struct ShoulderScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,10)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
@@ -192,16 +179,14 @@ struct ShoulderScreen: View {
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                                .padding(.trailing,10)
-                                            Spacer()
-                                        }.padding(.leading,36)
+                                        }.padding()
                                     }
                                 })
                             })
                             Spacer()
                         }
                         .padding(.vertical, 20)
-                    }
+                        .padding(.horizontal,16)
                 }
             }
             .navigationTitle("Плечи")

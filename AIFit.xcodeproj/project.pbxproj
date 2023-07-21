@@ -30,6 +30,8 @@
 		192D845F2A45B34D009B2101 /* noskiExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D845E2A45B34D009B2101 /* noskiExample.swift */; };
 		192D84612A486B70009B2101 /* FitnessCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D84602A486B70009B2101 /* FitnessCalendarView.swift */; };
 		192D84682A49713A009B2101 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 192D84672A49713A009B2101 /* Alamofire */; };
+		193A35FC2A6A40CF004AE250 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 193A35FB2A6A40CF004AE250 /* FirebaseMessaging */; };
+		193A36042A6A7467004AE250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 193A36032A6A7467004AE250 /* GoogleService-Info.plist */; };
 		194FBC7D2A319626007F3FF3 /* AIFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBC7C2A319626007F3FF3 /* AIFitApp.swift */; };
 		194FBC7F2A319626007F3FF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBC7E2A319626007F3FF3 /* ContentView.swift */; };
 		194FBC812A319628007F3FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194FBC802A319628007F3FF3 /* Assets.xcassets */; };
@@ -41,8 +43,7 @@
 		194FBCA92A31B8FF007F3FF3 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */; };
 		194FBCAB2A31BA3A007F3FF3 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */; };
 		194FBCB32A32D7F2007F3FF3 /* ExercisesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCB22A32D7F1007F3FF3 /* ExercisesScreen.swift */; };
-		1956120A2A67AA66008DA8D1 /* ChatMessages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 195612082A67AA66008DA8D1 /* ChatMessages.xcdatamodeld */; };
-		195612142A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195612132A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift */; };
+		1956121E2A6809E2008DA8D1 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956121D2A6809E2008DA8D1 /* NotificationHandler.swift */; };
 		195858702A5C2D2200A10E4D /* ResizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958586F2A5C2D2200A10E4D /* ResizableTextView.swift */; };
 		195858722A5C302E00A10E4D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195858712A5C302E00A10E4D /* Message.swift */; };
 		195858742A5C324400A10E4D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195858732A5C324400A10E4D /* MessageView.swift */; };
@@ -59,6 +60,7 @@
 		197B02C52A5EE0B800524BB2 /* SmithPrised.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197B02C42A5EE0B800524BB2 /* SmithPrised.swift */; };
 		1985974F2A43019600100244 /* svrukScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985974E2A43019600100244 /* svrukScreen.swift */; };
 		198597512A43110B00100244 /* jimlezhaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198597502A43110B00100244 /* jimlezhaScreen.swift */; };
+		199CFDAE2A6A85490029621A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 199CFDAD2A6A85490029621A /* FirebaseAnalytics */; };
 		19AE6DC82A4461FC00D027D6 /* arnoldScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6DC72A4461FC00D027D6 /* arnoldScreen.swift */; };
 		19AE6DCA2A44665800D027D6 /* mahiScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6DC92A44665800D027D6 /* mahiScreen.swift */; };
 		19AE6DCC2A447A9D00D027D6 /* tyagashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6DCB2A447A9D00D027D6 /* tyagashScreen.swift */; };
@@ -121,6 +123,7 @@
 		192D845C2A45ACEA009B2101 /* VypadyvpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VypadyvpScreen.swift; sourceTree = "<group>"; };
 		192D845E2A45B34D009B2101 /* noskiExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noskiExample.swift; sourceTree = "<group>"; };
 		192D84602A486B70009B2101 /* FitnessCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCalendarView.swift; sourceTree = "<group>"; };
+		193A36032A6A7467004AE250 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		194FBC792A319626007F3FF3 /* AIFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194FBC7C2A319626007F3FF3 /* AIFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFitApp.swift; sourceTree = "<group>"; };
 		194FBC7E2A319626007F3FF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,8 +138,7 @@
 		194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		194FBCB22A32D7F1007F3FF3 /* ExercisesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesScreen.swift; sourceTree = "<group>"; };
-		195612092A67AA66008DA8D1 /* ChatMessages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatMessages.xcdatamodel; sourceTree = "<group>"; };
-		195612132A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatMessageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1956121D2A6809E2008DA8D1 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		1958586F2A5C2D2200A10E4D /* ResizableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableTextView.swift; sourceTree = "<group>"; };
 		195858712A5C302E00A10E4D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		195858732A5C324400A10E4D /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -181,7 +183,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193A35FC2A6A40CF004AE250 /* FirebaseMessaging in Frameworks */,
 				190D14D72A4C334500B5EC09 /* SwiftUICharts in Frameworks */,
+				199CFDAE2A6A85490029621A /* FirebaseAnalytics in Frameworks */,
 				192D84682A49713A009B2101 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,14 +252,21 @@
 			path = LegsScreenFile;
 			sourceTree = "<group>";
 		};
+		193A35FA2A6A40CF004AE250 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		194FBC702A319626007F3FF3 = {
 			isa = PBXGroup;
 			children = (
-				195612132A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift */,
 				194FBC7B2A319626007F3FF3 /* AIFit */,
 				194FBC8C2A319628007F3FF3 /* AIFitTests */,
 				194FBC962A319628007F3FF3 /* AIFitUITests */,
 				194FBC7A2A319626007F3FF3 /* Products */,
+				193A35FA2A6A40CF004AE250 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,8 +283,10 @@
 		194FBC7B2A319626007F3FF3 /* AIFit */ = {
 			isa = PBXGroup;
 			children = (
+				193A36032A6A7467004AE250 /* GoogleService-Info.plist */,
 				194FBC7C2A319626007F3FF3 /* AIFitApp.swift */,
 				194FBC7E2A319626007F3FF3 /* ContentView.swift */,
+				1956121C2A6809C8008DA8D1 /* Notification */,
 				194FBCAF2A32D74A007F3FF3 /* ChatScreenFile */,
 				194FBCAE2A32D569007F3FF3 /* GuideScreenFile */,
 				194FBCB02A32D76A007F3FF3 /* MainPageFile */,
@@ -327,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */,
-				195612082A67AA66008DA8D1 /* ChatMessages.xcdatamodeld */,
 				195858712A5C302E00A10E4D /* Message.swift */,
 				195858732A5C324400A10E4D /* MessageView.swift */,
 				195858752A5C325200A10E4D /* User.swift */,
@@ -356,6 +368,14 @@
 				194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */,
 			);
 			path = SettingScreenFile;
+			sourceTree = "<group>";
+		};
+		1956121C2A6809C8008DA8D1 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				1956121D2A6809E2008DA8D1 /* NotificationHandler.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		19AE6DCF2A44811D00D027D6 /* BackScreenFile */ = {
@@ -422,6 +442,8 @@
 			packageProductDependencies = (
 				192D84672A49713A009B2101 /* Alamofire */,
 				190D14D62A4C334500B5EC09 /* SwiftUICharts */,
+				193A35FB2A6A40CF004AE250 /* FirebaseMessaging */,
+				199CFDAD2A6A85490029621A /* FirebaseAnalytics */,
 			);
 			productName = AIFit;
 			productReference = 194FBC792A319626007F3FF3 /* AIFit.app */;
@@ -499,6 +521,7 @@
 				192D84662A49713A009B2101 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				190D14D52A4C334500B5EC09 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
 				190D14D82A4C354900B5EC09 /* XCRemoteSwiftPackageReference "Charts" */,
+				195612152A67E74F008DA8D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 194FBC7A2A319626007F3FF3 /* Products */;
 			projectDirPath = "";
@@ -518,6 +541,7 @@
 			files = (
 				194FBC842A319628007F3FF3 /* Preview Assets.xcassets in Resources */,
 				194FBC812A319628007F3FF3 /* Assets.xcassets in Resources */,
+				193A36042A6A7467004AE250 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +578,7 @@
 				194FBCAB2A31BA3A007F3FF3 /* ChatScreen.swift in Sources */,
 				19AE6DE02A45319F00D027D6 /* BicepsScreen.swift in Sources */,
 				19E5F9912A434C9200294996 /* jimganScreen.swift in Sources */,
+				1956121E2A6809E2008DA8D1 /* NotificationHandler.swift in Sources */,
 				19FBD3CF2A41AE6A00A17A96 /* ChestScreen.swift in Sources */,
 				1913A21B2A5F90C70092F12A /* francezhimgan.swift in Sources */,
 				197B02C12A5ED91100524BB2 /* sgipSkot.swift in Sources */,
@@ -570,7 +595,6 @@
 				192D84592A459F38009B2101 /* jimSmitaScreen.swift in Sources */,
 				1913A2232A5F9F6C0092F12A /* RazgipvN.swift in Sources */,
 				19AE6DD92A44969600D027D6 /* shragiScreen.swift in Sources */,
-				1956120A2A67AA66008DA8D1 /* ChatMessages.xcdatamodeld in Sources */,
 				197B02C32A5EDEE000524BB2 /* Jeff.swift in Sources */,
 				1900D4442A432B5B009EF595 /* ShoulderScreen.swift in Sources */,
 				19AE6DE22A4532D200D027D6 /* ZottmanScreen.swift in Sources */,
@@ -584,7 +608,6 @@
 				194FBC7F2A319626007F3FF3 /* ContentView.swift in Sources */,
 				192D845D2A45ACEA009B2101 /* VypadyvpScreen.swift in Sources */,
 				194FBCB32A32D7F2007F3FF3 /* ExercisesScreen.swift in Sources */,
-				195612142A67CF60008DA8D1 /* ChatMessageEntity+CoreDataProperties.swift in Sources */,
 				19AE6DCA2A44665800D027D6 /* mahiScreen.swift in Sources */,
 				19185E8C2A5EA44500AD72F4 /* armZhim.swift in Sources */,
 				192D84552A459A6A009B2101 /* LegsScreen.swift in Sources */,
@@ -763,12 +786,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AIFit/AIFit.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AIFit/Preview Content\"";
-				DEVELOPMENT_TEAM = 94CHBXCXT8;
+				DEVELOPMENT_TEAM = UD7GN29598;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AIFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -782,6 +808,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = make.AIFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -796,12 +823,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AIFit/AIFit.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AIFit/Preview Content\"";
-				DEVELOPMENT_TEAM = 94CHBXCXT8;
+				DEVELOPMENT_TEAM = UD7GN29598;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AIFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -815,6 +845,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = make.AIFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -964,6 +995,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		195612152A67E74F008DA8D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -977,20 +1016,17 @@
 			package = 192D84662A49713A009B2101 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		195612082A67AA66008DA8D1 /* ChatMessages.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				195612092A67AA66008DA8D1 /* ChatMessages.xcdatamodel */,
-			);
-			currentVersion = 195612092A67AA66008DA8D1 /* ChatMessages.xcdatamodel */;
-			path = ChatMessages.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		193A35FB2A6A40CF004AE250 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 195612152A67E74F008DA8D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
-/* End XCVersionGroup section */
+		199CFDAD2A6A85490029621A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 195612152A67E74F008DA8D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 194FBC712A319626007F3FF3 /* Project object */;
 }

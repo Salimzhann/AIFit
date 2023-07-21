@@ -22,7 +22,6 @@ struct MainPage: View {
     @AppStorage("IsActive2") var challenge2: Bool = false
     @AppStorage("IsActive3") var challenge3: Bool = false
     @AppStorage("IsActive4") var challenge4: Bool = false
-    @State var Statistic = false
     @State private var showAlert = false
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -35,10 +34,6 @@ struct MainPage: View {
                     .edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack{
-                        Button(action: {
-                            Statistic = true
-                        },
-                               label:{
                             ZStack{
                                 LinearGradient(colors: [Color(uiColor: .darkGray), .clear], startPoint: .top, endPoint: .bottom)
                                     .cornerRadius(15)
@@ -54,7 +49,6 @@ struct MainPage: View {
                                             .opacity(0.7)
                                             .frame(width: 362, height: 221))
                                     .padding(10)
-                                
                                 
                                 VStack{
                                     HStack{
@@ -84,7 +78,7 @@ struct MainPage: View {
                                                 .stroke(Color.blue.opacity(0.4), lineWidth: 25)
                                             Circle()
                                                 .trim(from: 0, to: CGFloat(progress))
-                                                .stroke(LinearGradient(colors: [.blue,.green], startPoint: .top, endPoint: .bottom), lineWidth: 30)
+                                                .stroke(LinearGradient(colors: [.blue,Color.teal], startPoint: .top, endPoint: .bottom), lineWidth: 30)
                                                 .rotationEffect(Angle(degrees: -90))
                                                 .animation(.linear(duration: 0.5))
                                         }
@@ -96,7 +90,7 @@ struct MainPage: View {
                                         counter+=1
                                         UserDefaults.standard.set(counter,forKey: "waterCounter")
                                     }, label: {
-                                        Text("    Добавить    ")
+                                        Text(" Добавить    ")
                                             .foregroundColor(Color.white)
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 10)
@@ -104,10 +98,9 @@ struct MainPage: View {
                                                     .frame(width: 200, height: 35))
                                             .padding(30)
                                     })
-                                }
+                                }.padding(.horizontal,16)
                             }
-                            
-                        })
+                        
                         
                         
                         
@@ -118,7 +111,7 @@ struct MainPage: View {
                             .font(.system(size: 27))
                         
                         if challenge  {
-                            Challenges(titles: "Ранний подъем",sd: 150)
+                            Challenges(titles: "Ранний подъем",sd: 130)
                         }else{
                             ZStack{
                                 Image("wakeup")
@@ -176,7 +169,7 @@ struct MainPage: View {
                                 }}
                         }
                         if challenge1  {
-                            Challenges(titles: "Отказ от сладостей", sd: 110)
+                            Challenges(titles: "Отказ от сладостей", sd: 80)
                         }else{
                             ZStack{
                                 Image("sweets")
@@ -235,7 +228,7 @@ struct MainPage: View {
                         }
                         
                         if challenge2 {
-                            Challenges(titles: "Никакой техники перед сном", sd: 0)
+                            Challenges(titles: "Никакой техники ", sd: 100)
                         }else{
                             ZStack{
                                 Image("gadgets")
@@ -293,7 +286,7 @@ struct MainPage: View {
                                 }}
                         }
                         if challenge3 {
-                            Challenges(titles: "Неделя без кофеина",sd: 100)
+                            Challenges(titles: "Неделя без кофеина",sd: 70)
                         }else{
                             ZStack{
                                 Image("cafein")
@@ -351,7 +344,7 @@ struct MainPage: View {
                                 }}
                         }
                         if challenge4 {
-                            Challenges(titles: "Никакой еды перед сном",sd:40)
+                            Challenges(titles: "Никакой еды перед сном",sd:20)
                         }else{
                             ZStack{
                                 Image("food")
@@ -421,14 +414,14 @@ struct MainPage: View {
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-           return formatter
-       }()
-       
-       private var progress: Double {
-           let percentage = Double(counter) / goal
-           return min(percentage, 1.0)
-       }
+        return formatter
+    }()
+    
+    private var progress: Double {
+        let percentage = Double(counter) / goal
+        return min(percentage, 1.0)
     }
+}
 
 
 struct MainPage_Previews: PreviewProvider {

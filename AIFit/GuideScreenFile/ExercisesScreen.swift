@@ -37,12 +37,10 @@ struct ExercisesScreen: View {
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                            .padding(.trailing,43)
-                                        Spacer()
-                                    }.padding(.leading,36)
+                                    }.padding(.trailing,200)
                                 }
                                 .padding(.top, 20)
-                                .padding(.horizontal,16)
+                               
                             })
                         })
                         
@@ -66,11 +64,9 @@ struct ExercisesScreen: View {
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                            .padding(.trailing,43)
-                                        Spacer()
-                                    }.padding(.leading,36)
-                                        .padding(.horizontal,16)
+                                    }.padding(.trailing,190)
                                 }
+                                .padding(.horizontal,16)
                             })
                         })
                         
@@ -93,11 +89,8 @@ struct ExercisesScreen: View {
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                            .padding(.trailing,43)
-                                        Spacer()
-                                    }.padding(.leading,36)
-                                        .padding(.horizontal,16)
-                                }
+                                    }.padding(.trailing,190)
+                                }.padding(.horizontal,16)
                             })
                         })
                         
@@ -120,11 +113,8 @@ struct ExercisesScreen: View {
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                            .padding(.trailing,43)
-                                        Spacer()
-                                    }.padding(.leading,36)
-                                        .padding(.horizontal,16)
-                                }
+                                    }.padding(.trailing,170)
+                                }.padding(.horizontal,16)
                             })
                         })
                         Button(action: {
@@ -146,11 +136,8 @@ struct ExercisesScreen: View {
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                            .padding(.trailing,43)
-                                        Spacer()
-                                    }.padding(.leading,36)
-                                        .padding(.horizontal,16)
-                                }
+                                    }.padding(.trailing,150)
+                                }.padding(.horizontal,16)
                             })
                         })
                         
@@ -172,16 +159,13 @@ struct ExercisesScreen: View {
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                            .padding(.trailing,43)
-                                        Spacer()
-                                    }.padding(.leading,36)
-                                        .padding(.horizontal,16)
-                                }
+                                    }.padding(.trailing,200)
+                                }.padding(.horizontal,16)
                             })
                         })
                         Spacer()
-                    }
-                    }
+                    }.padding(.horizontal,16)
+                }
             }
             .navigationTitle("Упражнения")
             .toolbarBackground(

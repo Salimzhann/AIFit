@@ -8,6 +8,7 @@ import Combine
 import SwiftUI
 
 struct Challenges: View {
+    @State private var showAlert = false
     @AppStorage("checkDay") var checkday: Int = 0
     @AppStorage("nextday") var days: Int = 0
     @AppStorage("incDay") var hasIncrementedCheckday: Bool = false
@@ -27,11 +28,39 @@ struct Challenges: View {
                 .opacity(0.3)
             
             VStack {
-                Text(titles)
-                    .font(.system(size: 23))
-                    .padding(.trailing, sd)
-                    .foregroundColor(.white)
-                    .bold()
+                HStack{
+                    Text(titles)
+                        .font(.system(size: 23))
+                        .padding(.trailing, sd)
+                        .foregroundColor(.white)
+                        .bold()
+                    Button(action: {
+                        showAlert = true
+                    }){
+                        Image(systemName: "trash")
+                            .resizable()
+                            .foregroundColor(.red)
+                            .frame(width: 20,height: 20)
+                    }.alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Обратите внимание"),
+                            message: Text("Вы уверены что хотите удалить процесс?"),
+                            primaryButton: .cancel(Text("Назад")), // "Cancel" button on the left
+                            secondaryButton: .destructive(Text("Да")) {
+                                UserDefaults.standard.set(false, forKey: "IsActive")
+                                UserDefaults.standard.set(false, forKey: "IsActive1")
+                                UserDefaults.standard.set(false, forKey: "IsActive2")
+                                UserDefaults.standard.set(false, forKey: "IsActive3")
+                                UserDefaults.standard.set(false, forKey: "IsActive4")
+                                isCompletedDays = [false,false,false,false,false,false,false]
+                                UserDefaults.standard.set(isCompletedDays,forKey: "isCompletedDays")
+                                UserDefaults.standard.set(0,forKey: "checkDay")
+                                UserDefaults.standard.set(0,forKey: "nextday")
+                                print("Sure button tapped")
+                            } // "Sure" button on the right
+                        )
+                    }
+                }.padding(.horizontal,16)
                 
                 Text("\(checkday)/7 дней")
                     .foregroundColor(.blue)
@@ -74,7 +103,7 @@ struct Challenges: View {
                         
                     }
                 })
-            }
+            }.padding(.horizontal,16)
         }
         .onAppear {
             isPulsating = true // Start the pulsating animation when the view appears

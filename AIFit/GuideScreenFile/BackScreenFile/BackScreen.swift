@@ -18,8 +18,6 @@ struct BackScreen: View {
                     .edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack{
-                        
-                        VStack{
                             Button(action: {
                                 
                             }, label: {
@@ -28,18 +26,18 @@ struct BackScreen: View {
                                         Image("podtyagivanie")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear,.clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Подтягивание широким хватом")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -52,18 +50,18 @@ struct BackScreen: View {
                                         Image("pulspin")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.9)
                                         LinearGradient(colors: [Color(uiColor: .red), .clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Пуловер на блоке")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -76,18 +74,18 @@ struct BackScreen: View {
                                         Image("tyagaspin")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Тяга штанги\n в наклоне")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -100,18 +98,18 @@ struct BackScreen: View {
                                         Image("shragi")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Шраги с гантелями")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -124,18 +122,18 @@ struct BackScreen: View {
                                         Image("tyagahigh")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Тяга в нижнем \nблоке узкий хват")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -148,18 +146,18 @@ struct BackScreen: View {
                                         Image("tyagagan")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Tяга гантелей в наклоне")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -171,25 +169,25 @@ struct BackScreen: View {
                                         Image("shragazad")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Шрага со штангой за спиной")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
                             Spacer()
                         }
                         .padding(.vertical, 20)
-                    }
+                        .padding(.horizontal,16)
                 }
             }
             .navigationTitle("Спина")

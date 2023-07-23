@@ -14,6 +14,7 @@
 import SwiftUI
 
 struct MainPage: View {
+    let notify = NotificationHandler()
     @State private var selectedDate = Date()
     @AppStorage("waterCounter") var counter: Int = 0
     private let goal: Double = 8
@@ -37,9 +38,8 @@ struct MainPage: View {
                             ZStack{
                                 LinearGradient(colors: [Color(uiColor: .darkGray), .clear], startPoint: .top, endPoint: .bottom)
                                     .cornerRadius(15)
-                                    .padding(.horizontal,16)
                                     .padding(.top, 20)
-                                    .frame(width: 392,height: 258)
+                                    .frame(height: 258)
                                     .opacity(0.35)
                                     .blur(radius: 2)
                                     .overlay(
@@ -47,8 +47,7 @@ struct MainPage: View {
                                             .stroke(LinearGradient(colors: [.white, .clear], startPoint: .top, endPoint: .bottom), lineWidth:2)
                                             .blur(radius:1.3)
                                             .opacity(0.7)
-                                            .frame(width: 362, height: 221))
-                                    .padding(10)
+                                            .frame(height: 221))
                                 
                                 VStack{
                                     HStack{
@@ -98,7 +97,7 @@ struct MainPage: View {
                                                     .frame(width: 200, height: 35))
                                             .padding(30)
                                     })
-                                }.padding(.horizontal,16)
+                                }
                             }
                         
                         
@@ -109,298 +108,305 @@ struct MainPage: View {
                             .foregroundColor(Color.white)
                             .bold()
                             .font(.system(size: 27))
-                        
-                        if challenge  {
-                            Challenges(titles: "Ранний подъем",sd: 130)
-                        }else{
-                            ZStack{
-                                Image("wakeup")
-                                    .resizable()
-                                    .cornerRadius(14)
-                                    .padding(16)
-                                    .cornerRadius(14)
-                                    .opacity(0.47)
-                                    .frame(width: 392,height: 248)
-                                    .blur(radius: 3)
-                                RoundedRectangle(cornerRadius: 16)
-                                    .padding(.horizontal,16)
-                                    .frame(width: 392,height: 218)
-                                    .foregroundColor(.blue)
-                                    .opacity(0.6)
-                                
-                                VStack{
-                                    Image(systemName: "alarm")
+                        VStack(spacing:20){
+                            if challenge  {
+                                Challenges(titles: "Ранний подъем",sd: 130)
+                            }else{
+                                ZStack{
+                                    Image("wakeup")
                                         .resizable()
-                                        .frame(width:  30, height: 30)
-                                        .padding(.trailing, 300)
-                                        .foregroundColor(.white)
-                                    Text("Ранний подъем")
-                                        .font(.system(size: 30))
-                                        .padding(.trailing, 110)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                    Text("Кто рано встает - тому Бог подает")
-                                        .font(.system(size: 18))
-                                        .padding(.trailing, 40)
-                                        .padding(.bottom, 30)
-                                        .foregroundColor(.white)
-                                    Button(action:{
-                                        if !challenge1 && !challenge2 && !challenge3 && !challenge4{
-                                            UserDefaults.standard.set(true, forKey: "IsActive")
-                                        }else{
-                                            showAlert = true
+                                        .cornerRadius(14)
+                                        .opacity(0.47)
+                                        .frame(height: 218)
+                                        .blur(radius: 3)
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .frame(height: 218)
+                                        .foregroundColor(.blue)
+                                        .opacity(0.6)
+                                    VStack{
+                                        HStack{
+                                            VStack{
+                                                Image(systemName: "alarm")
+                                                    .resizable()
+                                                    .frame(width:  30, height: 30)
+                                                    .padding(.trailing,245)
+                                                    .foregroundColor(.white)
+                                                Text("Ранний подъем")
+                                                    .font(.system(size: 30))
+                                                    .padding(.trailing,55)
+                                                    .foregroundColor(.white)
+                                                    .bold()
+                                                Text("Кто рано встает - тому Бог подает")
+                                                    .font(.system(size: 18))
+                                                    .padding(.leading,15)
+                                                    .padding(.bottom, 30)
+                                                    .foregroundColor(.white)
+                                            }
+                                            Spacer()
                                         }
-                                    }, label:{
-                                        ZStack{
-                                            RoundedRectangle(cornerRadius: 17)
-                                                .frame(width: 180, height: 40)
-                                                .foregroundColor(.white)
-                                            Text("Присоединиться")
-                                                .foregroundColor(.black)
+                                        Button(action:{
+                                            if !challenge1 && !challenge2 && !challenge3 && !challenge4{
+                                                UserDefaults.standard.set(true, forKey: "IsActive")
+                                            }else{
+                                                showAlert = true
+                                            }
+                                        }, label:{
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 17)
+                                                    .frame(width: 180, height: 40)
+                                                    .foregroundColor(.white)
+                                                Text("Присоединиться")
+                                                    .foregroundColor(.black)
+                                            }
+                                        })
+                                        .alert(isPresented: $showAlert) {
+                                            Alert(
+                                                title: Text("Ошибка"),
+                                                message: Text("У вас уже  активированo другое испытание"),
+                                                dismissButton: .default(Text("OK"))
+                                            )
                                         }
-                                    })
-                                    .alert(isPresented: $showAlert) {
-                                        Alert(
-                                            title: Text("Ошибка"),
-                                            message: Text("У вас уже  активированo другое испытание"),
-                                            dismissButton: .default(Text("OK"))
-                                        )
                                     }
+                                }
+                            }
+                            if challenge1  {
+                                Challenges(titles: "Отказ от сладостей", sd: 80)
+                            }else{
+                                ZStack{
+                                    Image("sweets")
+                                        .resizable()
+                                        .cornerRadius(14)
+                                        .opacity(0.47)
+                                        .frame(height: 218)
+                                        .blur(radius: 3)
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .frame(height: 218)
+                                        .foregroundColor(.pink)
+                                        .opacity(0.6)
+                                    VStack{
+                                        HStack{
+                                            VStack{
+                                                Image(systemName: "birthday.cake")
+                                                    .resizable()
+                                                    .frame(width:  30, height: 30)
+                                                    .padding(.trailing,230)
+                                                    .foregroundColor(.white)
+                                                Text("Отказ от сладостей")
+                                                    .font(.system(size: 30))
+                                                    .padding(.leading,15)
+                                                    .foregroundColor(.white)
+                                                    .bold()
+                                                Text("Посветите себя борьбе с \nлишним весом")
+                                                    .font(.system(size: 18))
+                                                    .padding(.trailing,40)
+                                                    .padding(.bottom, 17)
+                                                    .foregroundColor(.white)
+                                            }
+                                            Spacer()
+                                        }
+                                        Button(action:{
+                                            if !challenge && !challenge2 && !challenge3 && !challenge4{
+                                                UserDefaults.standard.set(true, forKey: "IsActive1")
+                                            }else{
+                                                showAlert = true
+                                            }
+                                        }, label:{
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 17)
+                                                    .frame(width: 180, height: 40)
+                                                    .foregroundColor(.white)
+                                                Text("Присоединиться")
+                                                    .foregroundColor(.black)
+                                            }
+                                        })
+                                        .alert(isPresented: $showAlert) {
+                                            Alert(
+                                                title: Text("Ошибка"),
+                                                message: Text("У вас уже  активированo другое испытание"),
+                                                dismissButton: .default(Text("OK"))
+                                            )
+                                        }
+                                    }}
+                            }
+                            
+                            if challenge2 {
+                                Challenges(titles: "Никакой техники ", sd: 100)
+                            }else{
+                                ZStack{
+                                    Image("gadgets")
+                                        .resizable()
+                                        .cornerRadius(14)
+                                        .opacity(0.47)
+                                        .frame(height: 218)
+                                        .blur(radius: 3)
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .frame(height: 218)
+                                        .foregroundColor(.purple)
+                                        .opacity(0.6)
+                                    VStack{
+                                        HStack{
+                                            VStack{
+                                            Image(systemName: "phone.bubble.left")
+                                                .resizable()
+                                                .frame(width:  30, height: 30)
+                                                .padding(.trailing,210)
+                                                .foregroundColor(.white)
+                                            Text("Никакой техники перед сном")
+                                                .font(.system(size: 30))
+                                                .padding(.leading,15)
+                                                .foregroundColor(.white)
+                                                .bold()
+                                            Text("Успокойте разум перед сном")
+                                                .font(.system(size: 18))
+                                                .padding(.leading,10)
+                                                .padding(.bottom, 1)
+                                                .foregroundColor(.white)
+                                        }
+                                            Spacer()
+                                    }
+                                        Button(action:{
+                                            if !challenge && !challenge1 && !challenge3 && !challenge4{
+                                                UserDefaults.standard.set(true, forKey: "IsActive2")
+                                            }else{
+                                                showAlert = true
+                                            }
+                                        }, label:{
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 17)
+                                                    .frame(width: 180, height: 40)
+                                                    .foregroundColor(.white)
+                                                Text("Присоединиться")
+                                                    .foregroundColor(.black)
+                                            }
+                                        })
+                                        .alert(isPresented: $showAlert) {
+                                            Alert(
+                                                title: Text("Ошибка"),
+                                                message: Text("У вас уже  активированo другое испытание"),
+                                                dismissButton: .default(Text("OK"))
+                                            )
+                                        }
+                                    }}
+                            }
+                            if challenge3 {
+                                Challenges(titles: "Неделя без кофеина",sd: 70)
+                            }else{
+                                ZStack{
+                                    Image("cafein")
+                                        .resizable()
+                                        .cornerRadius(14)
+                                        .opacity(0.47)
+                                        .frame(height: 218)
+                                        .blur(radius: 3)
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .frame(height: 218)
+                                        .foregroundColor(.brown)
+                                        .opacity(0.6)
+                                    VStack{
+                                        HStack{
+                                            VStack{
+                                            Image(systemName: "cup.and.saucer.fill")
+                                                .resizable()
+                                                .frame(width:  30, height: 30)
+                                                .padding(.trailing,250)
+                                                .foregroundColor(.white)
+                                            Text("Неделя без кофеина")
+                                                .font(.system(size: 30))
+                                                .padding(.leading,15)
+                                                .foregroundColor(.white)
+                                                .bold()
+                                            Text("Контролируй разум сам!")
+                                                .font(.system(size: 18))
+                                                .padding(.trailing,65)
+                                                .foregroundColor(.white)
+                                                .padding(.bottom,40)
+                                        }
+                                            Spacer()
+                                    }
+                                        Button(action:{
+                                            if !challenge && !challenge1 && !challenge2 && !challenge4{                                            UserDefaults.standard.set(true, forKey: "IsActive3")
+                                            }else{
+                                                showAlert = true
+                                            }
+                                        }, label:{
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 17)
+                                                    .frame(width: 180, height: 40)
+                                                    .foregroundColor(.white)
+                                                Text("Присоединиться")
+                                                    .foregroundColor(.black)
+                                            }
+                                        })
+                                        .alert(isPresented: $showAlert) {
+                                            Alert(
+                                                title: Text("Ошибка"),
+                                                message: Text("У вас уже  активированo другое испытание"),
+                                                dismissButton: .default(Text("OK"))
+                                            )
+                                        }
+                                    }}
+                            }
+                            if challenge4 {
+                                Challenges(titles: "Никакой еды перед сном",sd:20)
+                            }else{
+                                ZStack{
+                                    Image("food")
+                                        .resizable()
+                                        .cornerRadius(14)
+                                        .opacity(0.47)
+                                        .frame(height: 218)
+                                        .blur(radius: 3)
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .frame(height: 218)
+                                        .foregroundColor(.red)
+                                        .opacity(0.6)
+                                    VStack{
+                                        HStack{
+                                            VStack{
+                                            Image(systemName: "fork.knife")
+                                                .resizable()
+                                                .frame(width:  30, height: 30)
+                                                .padding(.trailing,140)
+                                                .foregroundColor(.white)
+                                            Text("Никакой еды \nперед сном")
+                                                .font(.system(size: 30))
+                                                .padding(.leading,15)
+                                                .foregroundColor(.white)
+                                                .bold()
+                                            Text("Насладитесь сном")
+                                                .font(.system(size: 18))
+                                                .padding(.trailing,15)
+                                                .foregroundColor(.white)
+                                        }
+                                            Spacer()
+                                    }
+                                        Button(action:{
+                                            if !challenge && !challenge1 && !challenge2 && !challenge3 {
+                                                challenge4 = true
+                                                UserDefaults.standard.set(true, forKey: "IsActive4")
+                                            }else{
+                                                showAlert = true
+                                            }
+                                        }, label:{
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 17)
+                                                    .frame(width: 180, height: 40)
+                                                    .foregroundColor(.white)
+                                                Text("Присоединиться")
+                                                    .foregroundColor(.black)
+                                            }
+                                        })
+                                        .alert(isPresented: $showAlert) {
+                                            Alert(
+                                                title: Text("Ошибка"),
+                                                message: Text("У вас уже  активированo другое испытание"),
+                                                dismissButton: .default(Text("OK"))
+                                            )
+                                        }
+                                    }
+                                    
                                 }}
                         }
-                        if challenge1  {
-                            Challenges(titles: "Отказ от сладостей", sd: 80)
-                        }else{
-                            ZStack{
-                                Image("sweets")
-                                    .resizable()
-                                    .cornerRadius(14)
-                                    .padding(16)
-                                    .cornerRadius(14)
-                                    .opacity(0.47)
-                                    .frame(width: 392,height: 248)
-                                    .blur(radius: 3)
-                                RoundedRectangle(cornerRadius: 16)
-                                    .padding(.horizontal,16)
-                                    .frame(width: 392,height: 218)
-                                    .foregroundColor(.pink)
-                                    .opacity(0.6)
-                                VStack{
-                                    Image(systemName: "birthday.cake")
-                                        .resizable()
-                                        .frame(width:  30, height: 30)
-                                        .padding(.trailing, 300)
-                                        .foregroundColor(.white)
-                                    Text("Отказ от сладостей")
-                                        .font(.system(size: 30))
-                                        .padding(.trailing, 50)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                    Text("Посветите себя борьбе с лишним весом")
-                                        .font(.system(size: 18))
-                                        .padding(.horizontal, 16)
-                                        .padding(.trailing, 110)
-                                        .padding(.bottom, 1)
-                                        .foregroundColor(.white)
-                                    Button(action:{
-                                        if !challenge && !challenge2 && !challenge3 && !challenge4{
-                                            UserDefaults.standard.set(true, forKey: "IsActive1")
-                                        }else{
-                                            showAlert = true
-                                        }
-                                    }, label:{
-                                        ZStack{
-                                            RoundedRectangle(cornerRadius: 17)
-                                                .frame(width: 180, height: 40)
-                                                .foregroundColor(.white)
-                                            Text("Присоединиться")
-                                                .foregroundColor(.black)
-                                        }
-                                    })
-                                    .alert(isPresented: $showAlert) {
-                                        Alert(
-                                            title: Text("Ошибка"),
-                                            message: Text("У вас уже  активированo другое испытание"),
-                                            dismissButton: .default(Text("OK"))
-                                        )
-                                    }
-                                }}
-                        }
-                        
-                        if challenge2 {
-                            Challenges(titles: "Никакой техники ", sd: 100)
-                        }else{
-                            ZStack{
-                                Image("gadgets")
-                                    .resizable()
-                                    .cornerRadius(14)
-                                    .padding(16)
-                                    .cornerRadius(14)
-                                    .opacity(0.47)
-                                    .frame(width: 392,height: 248)
-                                    .blur(radius: 3)
-                                RoundedRectangle(cornerRadius: 16)
-                                    .padding(.horizontal,16)
-                                    .frame(width: 392,height: 218)
-                                    .foregroundColor(.purple)
-                                    .opacity(0.6)
-                                VStack{
-                                    Image(systemName: "phone.bubble.left")
-                                        .resizable()
-                                        .frame(width:  30, height: 30)
-                                        .padding(.trailing, 300)
-                                        .foregroundColor(.white)
-                                    Text("Никакой техники перед сном")
-                                        .font(.system(size: 30))
-                                        .padding(.trailing, 80)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                    Text("Успокойте разум перед сном")
-                                        .font(.system(size: 18))
-                                        .padding(.horizontal, 20)
-                                        .padding(.trailing, 80)
-                                        .padding(.bottom, 1)
-                                        .foregroundColor(.white)
-                                    Button(action:{
-                                        if !challenge && !challenge1 && !challenge3 && !challenge4{
-                                            UserDefaults.standard.set(true, forKey: "IsActive2")
-                                        }else{
-                                            showAlert = true
-                                        }
-                                    }, label:{
-                                        ZStack{
-                                            RoundedRectangle(cornerRadius: 17)
-                                                .frame(width: 180, height: 40)
-                                                .foregroundColor(.white)
-                                            Text("Присоединиться")
-                                                .foregroundColor(.black)
-                                        }
-                                    })
-                                    .alert(isPresented: $showAlert) {
-                                        Alert(
-                                            title: Text("Ошибка"),
-                                            message: Text("У вас уже  активированo другое испытание"),
-                                            dismissButton: .default(Text("OK"))
-                                        )
-                                    }
-                                }}
-                        }
-                        if challenge3 {
-                            Challenges(titles: "Неделя без кофеина",sd: 70)
-                        }else{
-                            ZStack{
-                                Image("cafein")
-                                    .resizable()
-                                    .cornerRadius(14)
-                                    .padding(16)
-                                    .cornerRadius(14)
-                                    .opacity(0.47)
-                                    .frame(width: 392,height: 248)
-                                    .blur(radius: 3)
-                                RoundedRectangle(cornerRadius: 16)
-                                    .padding(.horizontal,16)
-                                    .frame(width: 392,height: 218)
-                                    .foregroundColor(.brown)
-                                    .opacity(0.6)
-                                VStack{
-                                    Image(systemName: "cup.and.saucer.fill")
-                                        .resizable()
-                                        .frame(width:  30, height: 30)
-                                        .padding(.trailing, 300)
-                                        .foregroundColor(.white)
-                                    Text("Неделя без кофеина")
-                                        .font(.system(size: 30))
-                                        .padding(.trailing, 50)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                    Text("Контролируй разум сам!")
-                                        .font(.system(size: 18))
-                                        .padding(.horizontal, 20)
-                                        .padding(.trailing, 130)
-                                        .padding(.bottom, 1)
-                                        .foregroundColor(.white)
-                                        .padding(.bottom, 30)
-                                    Button(action:{
-                                        if !challenge && !challenge1 && !challenge2 && !challenge4{                                            UserDefaults.standard.set(true, forKey: "IsActive3")
-                                        }else{
-                                            showAlert = true
-                                        }
-                                    }, label:{
-                                        ZStack{
-                                            RoundedRectangle(cornerRadius: 17)
-                                                .frame(width: 180, height: 40)
-                                                .foregroundColor(.white)
-                                            Text("Присоединиться")
-                                                .foregroundColor(.black)
-                                        }
-                                    })
-                                    .alert(isPresented: $showAlert) {
-                                        Alert(
-                                            title: Text("Ошибка"),
-                                            message: Text("У вас уже  активированo другое испытание"),
-                                            dismissButton: .default(Text("OK"))
-                                        )
-                                    }
-                                }}
-                        }
-                        if challenge4 {
-                            Challenges(titles: "Никакой еды перед сном",sd:20)
-                        }else{
-                            ZStack{
-                                Image("food")
-                                    .resizable()
-                                    .cornerRadius(14)
-                                    .padding(16)
-                                    .cornerRadius(14)
-                                    .opacity(0.47)
-                                    .frame(width: 392,height: 248)
-                                    .blur(radius: 3)
-                                RoundedRectangle(cornerRadius: 16)
-                                    .padding(.horizontal,16)
-                                    .frame(width: 392,height: 218)
-                                    .foregroundColor(.red)
-                                    .opacity(0.6)
-                                VStack{
-                                    Image(systemName: "fork.knife")
-                                        .resizable()
-                                        .frame(width:  30, height: 30)
-                                        .padding(.trailing, 300)
-                                        .foregroundColor(.white)
-                                    Text("Никакой еды перед сном")
-                                        .font(.system(size: 30))
-                                        .padding(.trailing, 130)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                    Text("Насладитесь сном")
-                                        .font(.system(size: 18))
-                                        .padding(.horizontal, 20)
-                                        .padding(.trailing, 160)
-                                        .padding(.bottom, 1)
-                                        .foregroundColor(.white)
-                                    Button(action:{
-                                        if !challenge && !challenge1 && !challenge2 && !challenge3 {
-                                            challenge4 = true
-                                            UserDefaults.standard.set(true, forKey: "IsActive4")
-                                        }else{
-                                            showAlert = true
-                                        }
-                                    }, label:{
-                                        ZStack{
-                                            RoundedRectangle(cornerRadius: 17)
-                                                .frame(width: 180, height: 40)
-                                                .foregroundColor(.white)
-                                            Text("Присоединиться")
-                                                .foregroundColor(.black)
-                                        }
-                                    })
-                                    .alert(isPresented: $showAlert) {
-                                        Alert(
-                                            title: Text("Ошибка"),
-                                            message: Text("У вас уже  активированo другое испытание"),
-                                            dismissButton: .default(Text("OK"))
-                                        )
-                                    }
-                                }}}
                     }
                     .padding(.horizontal,16)
                     .navigationTitle("Главная страница")

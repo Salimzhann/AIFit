@@ -17,7 +17,7 @@ struct ExercisesScreen: View {
                 Color.black
                     .edgesIgnoringSafeArea(.all)
                 ScrollView{
-                    VStack{
+                    VStack(spacing: 16) {
                         Button(action: {
                             
                         }, label: {
@@ -26,21 +26,21 @@ struct ExercisesScreen: View {
                                     Image("chest")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                         .opacity(0.8)
                                     LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .cornerRadius(20)
                                     HStack{
                                         Text("Грудь")
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                    }.padding(.trailing,200)
-                                }
-                                .padding(.top, 20)
-                               
+                                            .padding(.leading,20)
+                                            Spacer()
+                                    }
+                                }                               
                             })
                         })
                         
@@ -53,20 +53,21 @@ struct ExercisesScreen: View {
                                     Image("shoulder")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                         .opacity(0.8)
                                     LinearGradient(colors: [Color(uiColor: .red), .clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .cornerRadius(20)
                                     HStack{
                                         Text("Плечи")
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                    }.padding(.trailing,190)
+                                            .padding(.leading,20)
+                                            Spacer()
+                                    }
                                 }
-                                .padding(.horizontal,16)
                             })
                         })
                         
@@ -78,19 +79,21 @@ struct ExercisesScreen: View {
                                     Image("back")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                         .opacity(0.8)
                                     LinearGradient(colors: [Color(uiColor: .red), .clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .cornerRadius(20)
                                     HStack{
                                         Text("Спина")
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                    }.padding(.trailing,190)
-                                }.padding(.horizontal,16)
+                                            .padding(.leading,20)
+                                            Spacer()
+                                    }
+                                }
                             })
                         })
                         
@@ -102,19 +105,21 @@ struct ExercisesScreen: View {
                                     Image("biceps")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                         .opacity(0.8)
                                     LinearGradient(colors: [Color(uiColor: .red), .clear,.clear], startPoint: .leading, endPoint: .trailing)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .cornerRadius(20)
                                     HStack{
                                         Text("Бицепс")
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                    }.padding(.trailing,170)
-                                }.padding(.horizontal,16)
+                                            .padding(.leading,20)
+                                            Spacer()
+                                    }
+                                }
                             })
                         })
                         Button(action: {
@@ -125,19 +130,21 @@ struct ExercisesScreen: View {
                                     Image("trits")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                         .opacity(0.8)
                                     LinearGradient(colors: [Color(uiColor: .red), .clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .cornerRadius(20)
                                     HStack{
                                         Text("Трицепс")
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                    }.padding(.trailing,150)
-                                }.padding(.horizontal,16)
+                                            .padding(.leading,20)
+                                            Spacer()
+                                    }
+                                }
                             })
                         })
                         
@@ -148,22 +155,23 @@ struct ExercisesScreen: View {
                                     Image("break")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                         .opacity(0.8)
                                     LinearGradient(colors: [Color(uiColor: .red), .clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                        .frame(width: 350, height: 100)
+                                        .frame(height: 100)
                                         .cornerRadius(20)
                                     HStack{
                                         Text("Ноги")
                                             .font(.largeTitle)
                                             .bold()
                                             .foregroundColor(Color(.white))
-                                    }.padding(.trailing,200)
-                                }.padding(.horizontal,16)
+                                            .padding(.leading,20)
+                                            Spacer()
+                                    }
+                                }
                             })
                         })
-                        Spacer()
                     }.padding(.horizontal,16)
                 }
             }

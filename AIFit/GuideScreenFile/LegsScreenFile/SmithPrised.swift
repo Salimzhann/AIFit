@@ -18,70 +18,77 @@ struct SmithPrised: View {
                     .edgesIgnoringSafeArea(.all)
             ScrollView{
                 VStack{
-                        VStack{
                             Image("smithprisedExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .padding(20)
-                                .padding(.horizontal,5)
-                                .frame(width: 406, height: 256)
+                                .frame(height: 246)
                             Text("Приседание в тренажере Смита")
                                 .foregroundColor(.white)
                                 .font(.system(size: 21))
                                 .bold()
-                                .padding(.trailing,5)
                                 .padding(.bottom,1)
                             Text("Конечно, приседания в тренажере Смита несколько уступают традиционным приседаниям со штангой в деле построения массивных бедер. Но вместе с тем, тренажер Смита имеет свои преимущества.")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity,
+                            alignment: .topLeading
+                        )
+                        .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 140)
-                                    
                                 )
-                                .padding(.horizontal,40)
-                                .padding(.vertical, 1)
                                 .foregroundColor(.white)
                             Text("\nТехника выполнения")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                                 .bold()
-                                .padding(.trailing, 90)
                                 .padding(.bottom,1)
-                            VStack(spacing: 30){
+                            VStack(spacing: 10){
                                 Text("Подсядьте под гриф в тренажере Смита, упритесь в него верхней частью трапеций, обхватите гриф хватом сверху, освободите замки и выпрямитесь. Поставьте ступни на ширине плеч и выдвиньте их вперед так, чтобы носки больших пальцев ног «вылазили» на 20-25 см за линию бедер.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 210)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
-                                
                                 Text("Спина слегка прогнута в пояснице и перпендикулярна полу (плечи расположены строго над бедрами).Сделайте глубокий вдох и, задержав дыхание, присядьте, отводя таз назад — представьте, что садитесь на стул. Опускайтесь до тех пор, пока бедра станут параллельны полу.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 190)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
-                                
                                 Text("Достигнув нижнюю точку, не пружиньте ногами, а, по-прежнему задерживая дыхание, напрягите бедра и плавно, без рывка, измените направление движения и выжмите себя вверх.Преодолев самый сложный участок, выдохните.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 170)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
-                                
-                               
                             }
-                        }
-                    }
+                }.padding(.horizontal,16)
+                    .padding(.vertical,20)
                 }
             }
             .navigationTitle("Ноги")

@@ -18,48 +18,51 @@ struct MolotScreen: View {
                     .edgesIgnoringSafeArea(.all)
             ScrollView{
                 VStack{
-                        VStack{
                             Image("molotExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .padding(20)
-                                .padding(.horizontal,5)
-                                .frame(width: 406, height: 306)
+                                .frame(height: 286)
                             Text("Сгибание 'Молот'")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                                 .bold()
-                                .padding(.trailing,110)
                                 .padding(.bottom,1)
                             Text("Упражнение молоток считается формирующим для мышц рук. Воздействует на боковую (наружную) головку бицепса, отлично прорабатывает брахиалис. Также нагрузка ложится на внешнюю часть предплечья, плечелучевую мышцу.")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity,
+                            alignment: .topLeading
+                        )
+                        .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 170)
-                                    
                                 )
-                                .padding(.horizontal,40)
-                                .padding(.vertical, 2)
                                 .foregroundColor(.white)
                             Text("\nТехника выполнения")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                                 .bold()
-                                .padding(.trailing, 80)
                                 .padding(.bottom,1)
-                            VStack(spacing: 20){
+                            VStack(spacing: 10){
                                 Text("Возьмите в руки гантели нейтральным хватом (ладони смотрят друг на друга).Сгибая руку в локте, поднесите одну гантель к плечу, не меняя хвата.Опустите руку в исходное положение, полностью выпрямив ее, и повторите упражнение другой рукой.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 170)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
-                            }
                         }
-                    }
+                }.padding(.horizontal,16)
+                    .padding(.vertical,20)
                 }
             }
             .navigationTitle("Бицепсы")

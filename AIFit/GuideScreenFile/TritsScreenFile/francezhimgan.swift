@@ -18,70 +18,79 @@ struct francezhimgan: View {
                     .edgesIgnoringSafeArea(.all)
             ScrollView{
                 VStack{
-                        VStack{
                             Image("francezhimExample")
                                 .resizable()
                                 .cornerRadius(12)
                                 .padding(20)
                                 .padding(.horizontal,5)
-                                .frame(width: 406, height: 256)
+                                .frame(height: 256)
                             Text("Французский жим с гантелями")
                                 .foregroundColor(.white)
                                 .font(.system(size: 23))
                                 .bold()
-                                .padding(.trailing,5)
                                 .padding(.bottom,1)
                             Text("Конечно, приседания в тренажере Смита несколько уступают традиционным приседаниям со штангой в деле построения массивных бедер. Но вместе с тем, тренажер Смита имеет свои преимущества.")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity,
+                            alignment: .topLeading
+                        )
+                        .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 140)
-                                    
                                 )
-                                .padding(.horizontal,40)
-                                .padding(.vertical, 1)
                                 .foregroundColor(.white)
                             Text("\nТехника выполнения")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                                 .bold()
-                                .padding(.trailing, 90)
                                 .padding(.bottom,1)
-                            VStack(spacing: 30){
+                            VStack(spacing: 10){
                                 Text("Возьмите гантели и лягте на горизонтальную скамью. Выпрямите руки, чтобы они были перпендикулярны корпусу, ладони направьте друг к другу.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 100)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
-                                
                                 Text("На вдохе, сохраняя плечи неподвижными, медленно опустите гантели до ушей. Локти смотрят вперёд.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 90)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
-                                
                                 Text("На выдохе, напрягая трицепс, поднимите гантели в исходное положение. Во время выполнения упражнения работают только предплечья.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 100)
-                                        
                                     )
-                                    .padding(.horizontal,36)
-                                    .padding(.vertical, 1)
-                                
-                               
-                            }
                         }
-                    }
+                }.padding(.horizontal,16)
+                    .padding(.vertical,20)
                 }
             }
             .navigationTitle("Трицепсы")

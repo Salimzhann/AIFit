@@ -22,11 +22,9 @@ struct Challenges: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
-                .padding(.horizontal, 16)
-                .frame(width: 392, height: 218)
+                .frame(height: 218)
                 .foregroundColor(Color(.darkGray))
                 .opacity(0.3)
-            
             VStack {
                 HStack{
                     Text(titles)
@@ -60,7 +58,7 @@ struct Challenges: View {
                             } // "Sure" button on the right
                         )
                     }
-                }.padding(.horizontal,16)
+                }
                 
                 Text("\(checkday)/7 дней")
                     .foregroundColor(.blue)
@@ -103,7 +101,7 @@ struct Challenges: View {
                         
                     }
                 })
-            }.padding(.horizontal,16)
+            }
         }
         .onAppear {
             isPulsating = true // Start the pulsating animation when the view appears

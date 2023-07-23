@@ -18,8 +18,6 @@ struct TritsScreen: View {
                     .edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack{
-                        
-                        VStack{
                             Button(action: {
                                 
                             }, label: {
@@ -28,11 +26,11 @@ struct TritsScreen: View {
                                         Image("francezhim")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear,.clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Французский жим с гантелями")
@@ -52,11 +50,11 @@ struct TritsScreen: View {
                                         Image("francezhimgrif")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red), .clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Французский жим со штангой")
@@ -76,18 +74,18 @@ struct TritsScreen: View {
                                         Image("razgipblok")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Pазгибание рук на блоке")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding(.trailing,20)
+                                        }
                                     }
                                 })
                             })
@@ -100,18 +98,18 @@ struct TritsScreen: View {
                                         Image("izzahead")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Раз­ги­бание рук из-за го­ловы")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding(.trailing,14)
+                                        }
                                     }
                                 })
                             })
@@ -124,18 +122,18 @@ struct TritsScreen: View {
                                         Image("razgipvn")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Pазгибание рук в наклоне")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -148,18 +146,18 @@ struct TritsScreen: View {
                                         Image("obrpush")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Oбратные \n отжимания")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -171,26 +169,26 @@ struct TritsScreen: View {
                                         Image("izzaheadgan")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Pазгибание штанги\n из за головы")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
                             Spacer()
                         }
                         .padding(.vertical, 20)
+                        .padding(.horizontal,16)
                     }
-                }
             }
             .navigationTitle("Трицепс")
             .toolbarBackground(

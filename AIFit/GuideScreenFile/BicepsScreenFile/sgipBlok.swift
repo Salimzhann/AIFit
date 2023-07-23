@@ -21,43 +21,48 @@ struct sgipBlok: View {
                             Image("sgipblokExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .padding(20)
-                                .padding(.horizontal,5)
-                                .frame(width: 406, height: 246)
+                                .frame(height: 286)
                             Text("Cгибание рук в нижнем блоке")
                                 .foregroundColor(.white)
                                 .font(.system(size: 23))
                                 .bold()
-                                .padding(.trailing,1)
                                 .padding(.bottom,1)
                             Text("Это упражнение рекомендуется выполнять после основных упражнений на бицепс со штангой и гантелями. Оно отлично справляется с изолированной проработкой бицепсов, однако по эффективности отстает от упражнений со свободными весами.")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity,
+                            alignment: .topLeading
+                        )
+                        .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 170)
-                                    
                                 )
-                                .padding(.horizontal,40)
-                                .padding(.vertical, 2)
                                 .foregroundColor(.white)
                             Text("\nТехника выполнения")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                                 .bold()
-                                .padding(.trailing, 90)
                                 .padding(.bottom,1)
-                            VStack(spacing: 20){
+                            VStack(spacing: 10){
                                 Text("Повернитесь спиной к тренажеру и возьмите одной рукой рукоять нижнего блока хватом ладонью вперед. На выдохе поднимите рабочую руку до уровня плеча. На вдохе медленно опустите руку в исходное положение. Выполните необходимое количество повторений и повторите упражнение для другой руки.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 210)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
                             }
-                        }
+                }.padding(.horizontal,16)
+                    .padding(.vertical,20)
                     }
                 }
             .navigationTitle("Бицепсы")

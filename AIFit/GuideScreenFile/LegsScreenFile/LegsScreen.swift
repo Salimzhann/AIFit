@@ -18,8 +18,6 @@ struct LegsScreen: View {
                     .edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack{
-                        
-                        VStack{
                             Button(action: {
                                 
                             }, label: {
@@ -28,18 +26,18 @@ struct LegsScreen: View {
                                         Image("jimnog")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear,.clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Жим ногами")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -52,18 +50,18 @@ struct LegsScreen: View {
                                         Image("ijmsmita")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red), .clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Приседание в тренажере смита")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -76,18 +74,18 @@ struct LegsScreen: View {
                                         Image("svednog")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Cведение ног сидя")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -100,18 +98,18 @@ struct LegsScreen: View {
                                         Image("vypadyvp")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Выпады вперед")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -124,18 +122,18 @@ struct LegsScreen: View {
                                         Image("noski")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Подъем на носки \nстоя")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -148,18 +146,18 @@ struct LegsScreen: View {
                                         Image("Jeff")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Приседание Джефферсона")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
@@ -171,25 +169,25 @@ struct LegsScreen: View {
                                         Image("smithprised")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .clipShape(RoundedRectangle(cornerRadius: 20))
                                             .opacity(0.7)
                                         LinearGradient(colors: [Color(uiColor: .red),.clear, .clear], startPoint: .leading, endPoint: .trailing)
-                                            .frame(width: 350, height: 100)
+                                            .frame(height: 100)
                                             .cornerRadius(20)
                                         HStack{
                                             Text("Приседание в тренажере Смита")
                                                 .font(.largeTitle)
                                                 .bold()
                                                 .foregroundColor(Color(.white))
-                                        }.padding()
+                                        }
                                     }
                                 })
                             })
                             Spacer()
                         }
                         .padding(.vertical, 20)
-                    }
+                        .padding(.horizontal,16)
                 }
             }
             .navigationTitle("Ноги")

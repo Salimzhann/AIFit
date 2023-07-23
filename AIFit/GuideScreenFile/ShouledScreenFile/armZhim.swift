@@ -21,67 +21,74 @@ struct armZhim: View {
                             Image("armzhimExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .padding(20)
-                                .padding(.horizontal,5)
-                                .frame(width: 406, height: 376)
+                                .frame(height: 300)
                             Text("Aрмейский жим")
                                 .foregroundColor(.white)
                                 .font(.system(size: 21))
                                 .bold()
-                                .padding(.trailing, 160)
                                 .padding(.bottom,1)
                             Text("Армейский жим — это базовое силовое упражнение, в котором атлет выжимает снаряд с груди вверх до полного распрямления рук, а затем опускает обратно. Как правило, под этим термином подразумевают подъём штанги стоя, но, поскольку определение не чёткое, армейским также могут называть жим с груди сидя и аналогичное движение с гантелями.")
+                            .frame(
+                                minWidth: 0,
+                                maxWidth: .infinity,
+                                minHeight: 0,
+                                maxHeight: .infinity,
+                                alignment: .topLeading
+                            )
+                            .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 230)
-                                    
                                 )
-                                .padding(.horizontal,40)
                             Text("\nТехника выполнения")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                                 .bold()
-                                .padding(.trailing, 90)
                                 .padding(.bottom,1)
                             VStack(spacing: 15){
                                 Text("Поднимите штангу вверх. Когда она проходит мимо лица, чуть отведите голову назад, вжимая подбородок в себя. Это нужно для того, чтобы штанга следовала строго вверх, а не вперёд. Движение по такой траектории облегчит упражнение и не перегрузит поясницу.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 180)
-                                        
                                     )
-                                    .padding(.horizontal,30)
-                                    .padding(.vertical, 1)
-                                
                                 Text("Как только гриф миновал голову, сдвиньте шею вперёд, под штангу, чтобы в верхней точке он находился за головой, на одной линии с вашими плечами, лопатками и тазом. Выпрямите руки и заблокируйте локти.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 140)
-                                        
                                     )
-                                    .padding(.horizontal,30)
-                                    .padding(.vertical, 5)
-                                
                                 Text("После этого опустите штангу обратно на грудь, снова отведя шею назад. Не позволяйте грифу уходить вперёд, чтобы не перегрузить поясницу.Положите штангу на грудь и без паузы повторите движение сначала. Следите, чтобы баланс всегда оставался на середине стопы, а не сдвигался на носки или пятки.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 210)
-                                        
                                     )
-                                    .padding(.horizontal,30)
-                                    .padding(.vertical, 5)
                             }
-                            .padding(.horizontal,10)
-                            .padding(.top,1)
                         }
                         .padding(.vertical,10)
                         .padding(.horizontal,20)
-                        
-                        
                     }
                 }
             .navigationTitle("Плечи")

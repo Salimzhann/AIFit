@@ -24,7 +24,7 @@ struct ContentView: View {
                                Label("Guide", systemImage: "book")
                            }
                    }
-                   .accentColor(Color.blue)
+                   .accentColor(Color.red)
                    .background(Color.black)
                }
                .background(Color.black)

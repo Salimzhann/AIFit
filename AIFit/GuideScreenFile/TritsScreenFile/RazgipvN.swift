@@ -21,66 +21,74 @@ struct RazgipvN: View {
                         Image("razgipvnExample")
                             .resizable()
                             .cornerRadius(12)
-                            .padding(.horizontal,16)
-                            .padding(.horizontal,5)
-                            .frame(width: 406, height: 256)
+                            .frame(height: 266)
                         Text("Pазгибание рук в наклоне")
                             .foregroundColor(.white)
                             .font(.system(size: 24))
                             .bold()
-                            .padding(.trailing,40)
                             .padding(.bottom,1)
-                        Text("Разгибание рук с гантелями назад ‒ одно\nиз лучших упражнений для трицепса.\nОно позволяет эффективно проработать упомянутую мышцу,добавить \nобъема рукам и подчеркнуть рельеф.\nДевушки могут использовать это упражнение для улучшения формы и\nизбавления от дряблости с задней стороны рук.")
-                            .padding(.horizontal,16)
+                        Text("Разгибание рук с гантелями назад ‒ одно из лучших упражнений для трицепса.Оно позволяет эффективно проработать упомянутую мышцу,добавить объема рукам и подчеркнуть рельеф.Девушки могут использовать это упражнение для улучшения формы и избавления от дряблости с задней стороны рук.")
+                            .frame(
+                                minWidth: 0,
+                                maxWidth: .infinity,
+                                minHeight: 0,
+                                maxHeight: .infinity,
+                                alignment: .topLeading
+                            )
+                            .padding(8)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 14)
                                     .stroke(Color.white, lineWidth: 1)
-                                    .frame(width: 350, height: 210)
-                                
                             )
-                            .padding(.horizontal,16)
-                            .padding(.vertical, 1)
                             .foregroundColor(.white)
                         Text("\nТехника выполнения")
                             .foregroundColor(.white)
                             .font(.system(size: 25))
                             .bold()
-                            .padding(.trailing, 90)
                             .padding(.bottom,1)
-                        VStack(spacing: 30){
-                            Text("Встаньте одним коленом на скамью.\nВозьмитесь рукой за скамью с той же стороны для поддержки тела и равновесия.Немного наклонитесь \nвперёд, ‒ так, чтобы корпус был \nпараллелен полу. Позвоночник должен \nбыть прямым. Шея выравнивается по уровню спины. Взгляд направлен вперёд. Живот втянут, мышцы пресса напряжены.")
-                                .padding(.horizontal,16)
+                        VStack(spacing: 10){
+                            Text("Встаньте одним коленом на скамью.Возьмитесь рукой за скамью с той же стороны для поддержки тела и равновесия.Немного наклонитесь вперёд, ‒ так, чтобы корпус был параллелен полу. Позвоночник должен быть прямым. Шея выравнивается по уровню спины. Взгляд направлен вперёд. Живот втянут, мышцы пресса напряжены.")
+                                .frame(
+                                    minWidth: 0,
+                                    maxWidth: .infinity,
+                                    minHeight: 0,
+                                    maxHeight: .infinity,
+                                    alignment: .topLeading
+                                )
+                                .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 230)
-                                        .padding(.horizontal,16)
                                 )
-                                .padding(.horizontal,19)
-                                .padding(.vertical, 1)
-                            
-                            Text("Вторую ногу поставьте на пол для опоры.\nГантель возьмите в свободную руку и согните локоть под прямым углом. Это исходное положение.Поднимите \nсогнутый локоть до такого уровня, \nчтобы плечо было параллельно полу. Предплечье с гантелью при этом \nнаправлено вниз. Сделайте вдох.")
-                                .padding(.horizontal,16)
+                            Text("Вторую ногу поставьте на пол для опоры.Гантель возьмите в свободную руку и согните локоть под прямым углом. Это исходное положение.Поднимите согнутый локоть до такого уровня, чтобы плечо было параллельно полу. Предплечье с гантелью при этом направлено вниз. Сделайте вдох.")
+                                .frame(
+                                    minWidth: 0,
+                                    maxWidth: .infinity,
+                                    minHeight: 0,
+                                    maxHeight: .infinity,
+                                    alignment: .topLeading
+                                )
+                                .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 190)
-                                        .padding(.horizontal,16)
                                 )
-                                .padding(.horizontal,16)
-                                .padding(.vertical, 1)
-                            Text("Выдыхая, разгибайте локоть строго\nназад, пока рука не будет полностью прямой. Трицепс в этот момент должен \nбыть максимально напряжен, а\n положение плеча зафиксировано.\nНесколько мгновений удерживайте\n гантель в прямой руке.На вдохе плавно верните руку в исходное положение.")
-                                .padding(.horizontal,16)
+                            Text("Выдыхая, разгибайте локоть строго назад, пока рука не будет полностью прямой. Трицепс в этот момент должен  быть максимально напряжен, а положение плеча зафиксировано. Несколько мгновений удерживайте\n гантель в прямой руке.На вдохе плавно верните руку в исходное положение.")
+                                .frame(
+                                    minWidth: 0,
+                                    maxWidth: .infinity,
+                                    minHeight: 0,
+                                    maxHeight: .infinity,
+                                    alignment: .topLeading
+                                )
+                                .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 190)
-                                        .padding(.horizontal,16)
                                 )
-                                .padding(.horizontal,16)
-                                .padding(.vertical, 1)
                         }
-                    }
+                    }.padding(.horizontal,16)
+                        .padding(.vertical,20)
                 }
             }
             .navigationTitle("Трицепсы")

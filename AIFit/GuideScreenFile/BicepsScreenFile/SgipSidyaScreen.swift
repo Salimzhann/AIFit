@@ -21,43 +21,48 @@ struct SgipSidyaScreen: View {
                             Image("sgipsidyaExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .padding(20)
-                                .padding(.horizontal,5)
-                                .frame(width: 406, height: 246)
+                                .frame(height: 246)
                             Text("Сгибание рук с гантелями сидя")
                                 .foregroundColor(.white)
                                 .font(.system(size: 20))
                                 .bold()
-                                .padding(.trailing,30)
                                 .padding(.bottom,1)
                             Text("Сгибание рук с гантелями сидя - изолированное упражнение, направленное на развитие мышц-сгибателей руки (главным образом бицепса). В упражнении также задействованы: передняя дельтовидная мышца, в меньшей степени верхний отдел большой грудной мышцы.")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity,
+                            alignment: .topLeading
+                        )
+                        .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14)
                                         .stroke(Color.white, lineWidth: 1)
-                                        .frame(width: 350, height: 190)
-                                    
                                 )
-                                .padding(.horizontal,40)
-                                .padding(.vertical, 2)
                                 .foregroundColor(.white)
                             Text("\nТехника выполнения")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))
                                 .bold()
-                                .padding(.trailing, 90)
                                 .padding(.bottom,1)
-                            VStack(spacing: 20){
+                            VStack(spacing: 10){
                                 Text("Возьмите гантели нейтральным хватом и держите их в опущенных вниз руках.Согнув одну руку в локте, поднесите гантель к плечу, поворачивая при этом кисть так, что бы ладонь была обращена назад. Опустите гантель в исходное положение и повторите упражнение другой рукой.")
+                                    .frame(
+                                        minWidth: 0,
+                                        maxWidth: .infinity,
+                                        minHeight: 0,
+                                        maxHeight: .infinity,
+                                        alignment: .topLeading
+                                    )
+                                    .padding(8)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
                                             .stroke(Color.white, lineWidth: 1)
-                                            .frame(width: 350, height: 190)
-                                        
                                     )
-                                    .padding(.horizontal,40)
-                                    .padding(.vertical, 1)
                             }
-                        }
+                }.padding(.horizontal,16)
+                    .padding(.vertical,20)
                     }
                 }
             .navigationTitle("Бицепсы")

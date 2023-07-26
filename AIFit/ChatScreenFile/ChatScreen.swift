@@ -21,6 +21,9 @@ struct ViewHeightKey: PreferenceKey {
 struct ChatScreen: View {
     @State private var isTyping: Bool = false
     @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
+    @State var lol = ""
+    @State var kek = ""
+    @State var pip = ""
     @State var messageText: String = ""
     @State var cancellables = Set<AnyCancellable>()
     @State var listCount: Int = 0
@@ -181,6 +184,7 @@ struct ChatScreen: View {
 
 
     func sendMessage() {
+        lol = textViewValue
         let trimmedMessage = textViewValue.trimmingCharacters(in: .whitespacesAndNewlines)
         if !trimmedMessage.isEmpty {
             let myMessage = ChatMessage(id: UUID().uuidString, content: trimmedMessage, dataCreated: Date(), sender: .user)
@@ -189,7 +193,8 @@ struct ChatScreen: View {
             
             // Show typing animation
             isTyping = true
-            let prompt = trimmedMessage
+            let prompt = pip + "\n" + kek + "\n" + lol
+            print(prompt)
             let url = URL(string: "https://fastapi-3zy6.onrender.com/chat/")!
             let requestData = ["prompt": prompt]
             
@@ -228,6 +233,8 @@ struct ChatScreen: View {
                         isTyping = false
                         let botMessage = ChatMessage(id: UUID().uuidString, content: cleanedResponseString, dataCreated: Date(), sender: .gpt)
                         chatMessages.append(botMessage)
+                        kek = botMessage.content
+                        pip = lol
                     }
                 } else {
                     print("Failed to convert response data to string")

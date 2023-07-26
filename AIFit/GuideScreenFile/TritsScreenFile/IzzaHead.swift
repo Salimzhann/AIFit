@@ -21,7 +21,7 @@ struct IzzaHead: View {
                         Image("izzaheadExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 256)
                         
                         Text("Раз­ги­бание рук из-за го­ловы")
                             .foregroundColor(.white)

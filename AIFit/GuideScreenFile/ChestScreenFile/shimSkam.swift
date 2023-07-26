@@ -21,7 +21,7 @@ struct shimSkam: View {
                         Image("zhimskamExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 266)
                         Text("Жим гантелей на наклонной скамье")
                             .foregroundColor(.white)
                             .font(.system(size: 19))

@@ -21,7 +21,7 @@ struct HammScreen: View {
                             Image("hammExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 266)
                             Text("Жим в рычажном тренажере")
                                 .foregroundColor(.white)
                                 .font(.system(size: 20))

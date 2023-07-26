@@ -21,7 +21,7 @@ struct SmithPrised: View {
                             Image("smithprisedExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 246)
+                                .frame(height: 236)
                             Text("Приседание в тренажере Смита")
                                 .foregroundColor(.white)
                                 .font(.system(size: 21))

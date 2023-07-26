@@ -21,7 +21,7 @@ struct franceZhimGrif: View {
                         Image("francezhimgrifExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 236)
+                            .frame(height: 256)
                         Text("Французский жим лёжа \n        с кривым грифом")
                             .foregroundColor(.white)
                             .font(.system(size: 25))

@@ -21,7 +21,7 @@ struct JimnogScreen: View {
                         Image("jimnogExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 256)
                         Text("Жим ногами")
                             .foregroundColor(.white)
                             .font(.system(size: 20))

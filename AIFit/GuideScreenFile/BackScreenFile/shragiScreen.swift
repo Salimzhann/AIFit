@@ -21,7 +21,7 @@ struct shragiScreen: View {
                             Image("shragiExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 256)
                             Text("Шраги с гантелями")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

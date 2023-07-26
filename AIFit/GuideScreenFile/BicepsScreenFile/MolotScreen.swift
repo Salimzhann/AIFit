@@ -21,7 +21,7 @@ struct MolotScreen: View {
                             Image("molotExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 256)
                             Text("Сгибание 'Молот'")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

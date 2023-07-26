@@ -21,7 +21,7 @@ struct arnoldScreen: View {
                             Image("arnoldExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 266)
                             Text("Жим Арнольда")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

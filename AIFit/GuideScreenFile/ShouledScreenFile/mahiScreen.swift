@@ -21,7 +21,7 @@ struct mahiScreen: View {
                             Image("mahiExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 276)
                             Text("Махи гантелями в стороны")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

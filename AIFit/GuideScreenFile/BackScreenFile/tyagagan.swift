@@ -21,7 +21,7 @@ struct tyagagan: View {
                         Image("tyagaganExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 266)
                         Text("Tяга гантелей в наклоне")
                             .foregroundColor(.white)
                             .font(.system(size: 25))

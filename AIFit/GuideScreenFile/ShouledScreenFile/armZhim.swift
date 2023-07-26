@@ -21,7 +21,7 @@ struct armZhim: View {
                             Image("armzhimExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 300)
+                                .frame(height: 256)
                             Text("Aрмейский жим")
                                 .foregroundColor(.white)
                                 .font(.system(size: 21))

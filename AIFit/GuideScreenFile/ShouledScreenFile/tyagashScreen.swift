@@ -21,7 +21,7 @@ struct tyagashScreen: View {
                             Image("tyagashExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 276)
                             Text("Тяга штанги к подбородку")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

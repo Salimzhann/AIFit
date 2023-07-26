@@ -21,7 +21,7 @@ struct VypadyvpScreen: View {
                             Image("vypadyvpExample2")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame( height: 246)
+                                .frame( height: 256)
                             Text("Выпады вперед")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

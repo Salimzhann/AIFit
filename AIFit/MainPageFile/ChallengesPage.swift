@@ -52,6 +52,7 @@ struct Challenges: View {
                                 UserDefaults.standard.set(false, forKey: "IsActive4")
                                 isCompletedDays = [false,false,false,false,false,false,false]
                                 UserDefaults.standard.set(isCompletedDays,forKey: "isCompletedDays")
+                                UserDefaults.standard.set(false,forKey: "incDay")
                                 UserDefaults.standard.set(0,forKey: "checkDay")
                                 UserDefaults.standard.set(0,forKey: "nextday")
                                 print("Sure button tapped")

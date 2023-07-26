@@ -21,7 +21,7 @@ struct jimSmitaScreen: View {
                             Image("jimnogExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 256)
                             Text("Приседание в тренажере смита")
                                 .foregroundColor(.white)
                                 .font(.system(size: 20))

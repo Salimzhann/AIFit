@@ -21,7 +21,7 @@ struct RazgipBlok: View {
                         Image("razgipblokExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 256)
                         Text("Pазгибание рук на блоке")
                             .foregroundColor(.white)
                             .font(.system(size: 25))

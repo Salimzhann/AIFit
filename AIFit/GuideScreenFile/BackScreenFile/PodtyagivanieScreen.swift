@@ -21,7 +21,7 @@ struct PodtyagivanieScreen: View {
                             Image("podtyagivanieEx")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 256)
                             Text("Подтягивание широким хватом")
                                 .foregroundColor(.white)
                                 .font(.system(size: 20))

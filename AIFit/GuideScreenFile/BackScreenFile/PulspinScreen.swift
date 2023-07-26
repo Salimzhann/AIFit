@@ -21,7 +21,7 @@ struct PulspinScreen: View {
                             Image("pulspinExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 246)
                             Text("Пуловер на блоке с веревкой стоя")
                                 .foregroundColor(.white)
                                 .font(.system(size: 20))

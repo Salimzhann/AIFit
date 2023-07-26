@@ -79,10 +79,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct AIFitApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    let persistentContainer = CoreDataManager.shared.persistentContainer
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, persistentContainer.viewContext)
                 .preferredColorScheme(.dark)
         }
     }

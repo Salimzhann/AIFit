@@ -21,7 +21,7 @@ struct sgipSkot: View {
                         Image("sgipskotExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 256)
                         Text("Работа со штангой на скамье Скотта")
                             .foregroundColor(.white)
                             .font(.system(size: 19))

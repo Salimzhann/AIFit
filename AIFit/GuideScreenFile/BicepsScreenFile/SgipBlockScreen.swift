@@ -21,7 +21,7 @@ struct SgipBlockScreen: View {
                             Image("sgipblockExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 226)
                             Text("Сгибание рук в блоке")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

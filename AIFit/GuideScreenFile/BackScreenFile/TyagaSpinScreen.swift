@@ -21,7 +21,7 @@ struct TyagaSpinScreen: View {
                         Image("tyagaspinExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 266)
                         Text("Тяга штанги в наклоне")
                             .foregroundColor(.white)
                             .font(.system(size: 25))

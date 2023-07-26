@@ -21,7 +21,7 @@ struct otvrukScreen: View {
                             Image("otvrukExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 276)
                             Text("Отведение рук в сторону в блоке")
                                 .foregroundColor(.white)
                                 .font(.system(size: 21))

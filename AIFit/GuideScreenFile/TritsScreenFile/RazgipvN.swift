@@ -21,7 +21,7 @@ struct RazgipvN: View {
                         Image("razgipvnExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 266)
+                            .frame(height: 256)
                         Text("Pазгибание рук в наклоне")
                             .foregroundColor(.white)
                             .font(.system(size: 24))

@@ -21,7 +21,7 @@ struct sgipBlok: View {
                             Image("sgipblokExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 236)
                             Text("Cгибание рук в нижнем блоке")
                                 .foregroundColor(.white)
                                 .font(.system(size: 23))

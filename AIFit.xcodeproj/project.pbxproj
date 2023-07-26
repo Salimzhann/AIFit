@@ -28,7 +28,6 @@
 		192D845B2A45A594009B2101 /* SvednogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D845A2A45A594009B2101 /* SvednogScreen.swift */; };
 		192D845D2A45ACEA009B2101 /* VypadyvpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D845C2A45ACEA009B2101 /* VypadyvpScreen.swift */; };
 		192D845F2A45B34D009B2101 /* noskiExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D845E2A45B34D009B2101 /* noskiExample.swift */; };
-		192D84612A486B70009B2101 /* FitnessCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D84602A486B70009B2101 /* FitnessCalendarView.swift */; };
 		192D84682A49713A009B2101 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 192D84672A49713A009B2101 /* Alamofire */; };
 		194FBC7D2A319626007F3FF3 /* AIFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBC7C2A319626007F3FF3 /* AIFitApp.swift */; };
 		194FBC7F2A319626007F3FF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBC7E2A319626007F3FF3 /* ContentView.swift */; };
@@ -50,6 +49,9 @@
 		1958587A2A5C329600A10E4D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195858792A5C329500A10E4D /* ViewExtension.swift */; };
 		1958587C2A5C32C700A10E4D /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958587B2A5C32C700A10E4D /* KeyboardResponder.swift */; };
 		1958587E2A5C32DA00A10E4D /* ChatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958587D2A5C32DA00A10E4D /* ChatHelper.swift */; };
+		19637CEB2A70A95800A18927 /* SimpleToDoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19637CE92A70A95800A18927 /* SimpleToDoModel.xcdatamodeld */; };
+		19637CEE2A70AA1800A18927 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19637CED2A70AA1800A18927 /* CoreDataManager.swift */; };
+		19637CF02A70AB2500A18927 /* SimpleToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19637CEF2A70AB2500A18927 /* SimpleToDoView.swift */; };
 		197B02BB2A5ECE1F00524BB2 /* mahiVpered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197B02BA2A5ECE1F00524BB2 /* mahiVpered.swift */; };
 		197B02BD2A5ED0FD00524BB2 /* shragaZad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197B02BC2A5ED0FD00524BB2 /* shragaZad.swift */; };
 		197B02BF2A5ED51500524BB2 /* sgipBlok.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197B02BE2A5ED51400524BB2 /* sgipBlok.swift */; };
@@ -119,7 +121,6 @@
 		192D845A2A45A594009B2101 /* SvednogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvednogScreen.swift; sourceTree = "<group>"; };
 		192D845C2A45ACEA009B2101 /* VypadyvpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VypadyvpScreen.swift; sourceTree = "<group>"; };
 		192D845E2A45B34D009B2101 /* noskiExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noskiExample.swift; sourceTree = "<group>"; };
-		192D84602A486B70009B2101 /* FitnessCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCalendarView.swift; sourceTree = "<group>"; };
 		194FBC792A319626007F3FF3 /* AIFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194FBC7C2A319626007F3FF3 /* AIFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFitApp.swift; sourceTree = "<group>"; };
 		194FBC7E2A319626007F3FF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +144,9 @@
 		195858792A5C329500A10E4D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		1958587B2A5C32C700A10E4D /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		1958587D2A5C32DA00A10E4D /* ChatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelper.swift; sourceTree = "<group>"; };
+		19637CEA2A70A95800A18927 /* SimpleToDoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleToDoModel.xcdatamodel; sourceTree = "<group>"; };
+		19637CED2A70AA1800A18927 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		19637CEF2A70AB2500A18927 /* SimpleToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleToDoView.swift; sourceTree = "<group>"; };
 		197B02BA2A5ECE1F00524BB2 /* mahiVpered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mahiVpered.swift; sourceTree = "<group>"; };
 		197B02BC2A5ED0FD00524BB2 /* shragaZad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shragaZad.swift; sourceTree = "<group>"; };
 		197B02BE2A5ED51400524BB2 /* sgipBlok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sgipBlok.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 			children = (
 				194FBC7C2A319626007F3FF3 /* AIFitApp.swift */,
 				194FBC7E2A319626007F3FF3 /* ContentView.swift */,
+				19637CE82A70A93900A18927 /* ToDo */,
 				1956121C2A6809C8008DA8D1 /* Notification */,
 				194FBCAF2A32D74A007F3FF3 /* ChatScreenFile */,
 				194FBCAE2A32D569007F3FF3 /* GuideScreenFile */,
@@ -348,7 +353,6 @@
 		194FBCB02A32D76A007F3FF3 /* MainPageFile */ = {
 			isa = PBXGroup;
 			children = (
-				192D84602A486B70009B2101 /* FitnessCalendarView.swift */,
 				194FBCA62A319DA5007F3FF3 /* MainPage.swift */,
 				19D383472A5A8DF600162925 /* ChallengesPage.swift */,
 			);
@@ -369,6 +373,24 @@
 				1956121D2A6809E2008DA8D1 /* NotificationHandler.swift */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		19637CE82A70A93900A18927 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				19637CEC2A70A9EE00A18927 /* CoreDataManager */,
+				19637CE92A70A95800A18927 /* SimpleToDoModel.xcdatamodeld */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		19637CEC2A70A9EE00A18927 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				19637CED2A70AA1800A18927 /* CoreDataManager.swift */,
+				19637CEF2A70AB2500A18927 /* SimpleToDoView.swift */,
+			);
+			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
 		19AE6DCF2A44811D00D027D6 /* BackScreenFile */ = {
@@ -574,7 +596,6 @@
 				197B02C12A5ED91100524BB2 /* sgipSkot.swift in Sources */,
 				1913A2212A5F9C750092F12A /* IzzaHead.swift in Sources */,
 				19AE6DD32A4483A400D027D6 /* PodtyagivanieScreen.swift in Sources */,
-				192D84612A486B70009B2101 /* FitnessCalendarView.swift in Sources */,
 				195858782A5C327900A10E4D /* ContentMessageView.swift in Sources */,
 				19FBD3D12A41CE8200A17A96 /* SwendScreen.swift in Sources */,
 				19AE6DCC2A447A9D00D027D6 /* tyagashScreen.swift in Sources */,
@@ -587,6 +608,7 @@
 				19AE6DD92A44969600D027D6 /* shragiScreen.swift in Sources */,
 				197B02C32A5EDEE000524BB2 /* Jeff.swift in Sources */,
 				1900D4442A432B5B009EF595 /* ShoulderScreen.swift in Sources */,
+				19637CEB2A70A95800A18927 /* SimpleToDoModel.xcdatamodeld in Sources */,
 				19AE6DE22A4532D200D027D6 /* ZottmanScreen.swift in Sources */,
 				195858762A5C325200A10E4D /* User.swift in Sources */,
 				1958587C2A5C32C700A10E4D /* KeyboardResponder.swift in Sources */,
@@ -597,6 +619,7 @@
 				1913A2192A5F8F360092F12A /* TritsScreen.swift in Sources */,
 				194FBC7F2A319626007F3FF3 /* ContentView.swift in Sources */,
 				192D845D2A45ACEA009B2101 /* VypadyvpScreen.swift in Sources */,
+				19637CF02A70AB2500A18927 /* SimpleToDoView.swift in Sources */,
 				194FBCB32A32D7F2007F3FF3 /* ExercisesScreen.swift in Sources */,
 				19AE6DCA2A44665800D027D6 /* mahiScreen.swift in Sources */,
 				19185E8C2A5EA44500AD72F4 /* armZhim.swift in Sources */,
@@ -610,6 +633,7 @@
 				1913A2272A5FA59B0092F12A /* IzzaheadGan.swift in Sources */,
 				1913A2252A5FA2AD0092F12A /* ObrPush.swift in Sources */,
 				1913A21F2A5F96450092F12A /* RazgipBlok.swift in Sources */,
+				19637CEE2A70AA1800A18927 /* CoreDataManager.swift in Sources */,
 				19FBD3D32A41D93400A17A96 /* HammScreen.swift in Sources */,
 				19D383482A5A8DF700162925 /* ChallengesPage.swift in Sources */,
 				197B02C52A5EE0B800524BB2 /* SmithPrised.swift in Sources */,
@@ -1007,6 +1031,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		19637CE92A70A95800A18927 /* SimpleToDoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				19637CEA2A70A95800A18927 /* SimpleToDoModel.xcdatamodel */,
+			);
+			currentVersion = 19637CEA2A70A95800A18927 /* SimpleToDoModel.xcdatamodel */;
+			path = SimpleToDoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 194FBC712A319626007F3FF3 /* Project object */;
 }

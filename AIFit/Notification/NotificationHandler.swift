@@ -49,7 +49,7 @@ class NotificationHandler{
         let randomQuote = motivationalQuotes[randomIndex]
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 10
+        dateComponents.hour = 9
         dateComponents.minute = 10
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()

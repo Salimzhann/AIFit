@@ -21,7 +21,7 @@ struct pushupScreen: View {
                         Image("pushupExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 256)
                         Text("Отжимание")
                             .foregroundColor(.white)
                             .font(.system(size: 25))

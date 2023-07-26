@@ -21,8 +21,6 @@ struct francezhimgan: View {
                             Image("francezhimExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .padding(20)
-                                .padding(.horizontal,5)
                                 .frame(height: 256)
                             Text("Французский жим с гантелями")
                                 .foregroundColor(.white)

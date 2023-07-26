@@ -21,7 +21,7 @@ struct jimganScreen: View {
                         Image("shExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 266)
                         Text("Жим гантелей сидя")
                             .foregroundColor(.white)
                             .font(.system(size: 25))

@@ -21,7 +21,7 @@ struct SvednogScreen: View {
                             Image("svednogExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 256)
                             Text("Cведение ног сидя")
                                 .foregroundColor(.white)
                                 .font(.system(size: 20))

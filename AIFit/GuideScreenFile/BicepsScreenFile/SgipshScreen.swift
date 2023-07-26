@@ -21,7 +21,7 @@ struct SgipshScreen: View {
                             Image("sgipshExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 246)
+                                .frame(height: 206)
                             Text("Сгибание рук со штангой")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

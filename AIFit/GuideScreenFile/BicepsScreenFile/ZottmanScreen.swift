@@ -18,10 +18,10 @@ struct ZottmanScreen: View {
                     .edgesIgnoringSafeArea(.all)
             ScrollView{
                 VStack{
-                            Image("zottmanExample")
+                            Image("zottmanExample2")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 256)
                             Text("Сгибание Зоттмана")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

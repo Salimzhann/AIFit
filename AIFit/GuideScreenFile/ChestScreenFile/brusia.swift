@@ -21,7 +21,7 @@ struct brusia: View {
                         Image("brusiaExample")
                             .resizable()
                             .cornerRadius(12)
-                            .frame(height: 286)
+                            .frame(height: 256)
                         Text("Отжимание на брусьях")
                             .foregroundColor(.white)
                             .font(.system(size: 25))

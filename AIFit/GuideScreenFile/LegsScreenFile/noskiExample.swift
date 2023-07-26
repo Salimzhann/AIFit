@@ -21,7 +21,7 @@ struct noskiExample: View {
                             Image("noskiExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 256)
                             Text("Подъем на носки стоя")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

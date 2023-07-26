@@ -21,7 +21,7 @@ struct Jeff: View {
                             Image("JeffExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 246)
+                                .frame(height: 256)
                             Text("Приседание Джефферсона")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

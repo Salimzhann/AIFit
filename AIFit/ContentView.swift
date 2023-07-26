@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         ZStack {
                    TabView {
@@ -22,6 +23,10 @@ struct ContentView: View {
                        ExercisesScreen()
                            .tabItem {
                                Label("Guide", systemImage: "book")
+                           }
+                       SimpleToDoView()
+                           .tabItem{
+                               Label("List", systemImage: "list.bullet.clipboard")
                            }
                    }
                    .accentColor(Color.red)

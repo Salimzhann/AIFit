@@ -21,7 +21,7 @@ struct tyagaHighBlockScreen: View {
                             Image("tyagahighExample")
                                 .resizable()
                                 .cornerRadius(12)
-                                .frame(height: 286)
+                                .frame(height: 266)
                             Text("Tяга горизонтального блока")
                                 .foregroundColor(.white)
                                 .font(.system(size: 25))

@@ -15,6 +15,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     let mainCh = MainPage()
     @AppStorage("checkDay") var checkday: Int = 0
     @AppStorage("waterCounter") var counter: Int = 0
+    @AppStorage("notifDay") var notifCou: Int = 0
     @AppStorage("incDay") var hasIncrementedCheckday: Bool = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -47,6 +48,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     @objc private func refreshDaysAndCommits() {
+        UserDefaults.standard.set(0, forKey: "notifDay")
         if mainCh.challenge || mainCh.challenge1 || mainCh.challenge2 || mainCh.challenge3 || mainCh.challenge4 {
             if days+1 == 7 {
                 isCompletedDays = [false,false,false,false,false,false,false]

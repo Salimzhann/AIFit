@@ -4,7 +4,7 @@
 //
 //  Created by Manas Salimzhan on 19.07.2023.
 //
-
+import SwiftUI
 import Foundation
 import UserNotifications
 class NotificationHandler{
@@ -49,35 +49,29 @@ class NotificationHandler{
         let randomQuote = motivationalQuotes[randomIndex]
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 9
-        dateComponents.minute = 10
+        dateComponents.hour = 14
+        dateComponents.minute = 8
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Мотивация дня!"
         content.body = randomQuote
         content.sound = UNNotificationSound.default
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request )
-        
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request )
     }
     
     func sendNotificationMotiv(){
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 20
-        dateComponents.minute = 10
+        dateComponents.hour = 14
+        dateComponents.minute = 8
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Время пришло!"
         content.body = "У вас есть испытание, думаю вы продержались сегодня?"
         content.sound = UNNotificationSound.default
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request )
-        
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request)
     }
 }
 

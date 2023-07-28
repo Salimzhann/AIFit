@@ -37,7 +37,6 @@
 		194FBC982A319628007F3FF3 /* AIFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBC972A319628007F3FF3 /* AIFitUITests.swift */; };
 		194FBC9A2A319628007F3FF3 /* AIFitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBC992A319628007F3FF3 /* AIFitUITestsLaunchTests.swift */; };
 		194FBCA72A319DA5007F3FF3 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCA62A319DA5007F3FF3 /* MainPage.swift */; };
-		194FBCA92A31B8FF007F3FF3 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */; };
 		194FBCAB2A31BA3A007F3FF3 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */; };
 		194FBCB32A32D7F2007F3FF3 /* ExercisesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194FBCB22A32D7F1007F3FF3 /* ExercisesScreen.swift */; };
 		1956121E2A6809E2008DA8D1 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956121D2A6809E2008DA8D1 /* NotificationHandler.swift */; };
@@ -132,7 +131,6 @@
 		194FBC972A319628007F3FF3 /* AIFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFitUITests.swift; sourceTree = "<group>"; };
 		194FBC992A319628007F3FF3 /* AIFitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		194FBCA62A319DA5007F3FF3 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
-		194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		194FBCAA2A31BA3A007F3FF3 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		194FBCB22A32D7F1007F3FF3 /* ExercisesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesScreen.swift; sourceTree = "<group>"; };
 		1956121D2A6809E2008DA8D1 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 				194FBCAF2A32D74A007F3FF3 /* ChatScreenFile */,
 				194FBCAE2A32D569007F3FF3 /* GuideScreenFile */,
 				194FBCB02A32D76A007F3FF3 /* MainPageFile */,
-				194FBCB12A32D77E007F3FF3 /* SettingScreenFile */,
 				194FBC802A319628007F3FF3 /* Assets.xcassets */,
 				194FBC822A319628007F3FF3 /* Preview Content */,
 			);
@@ -357,14 +354,6 @@
 				19D383472A5A8DF600162925 /* ChallengesPage.swift */,
 			);
 			path = MainPageFile;
-			sourceTree = "<group>";
-		};
-		194FBCB12A32D77E007F3FF3 /* SettingScreenFile */ = {
-			isa = PBXGroup;
-			children = (
-				194FBCA82A31B8FF007F3FF3 /* SettingScreen.swift */,
-			);
-			path = SettingScreenFile;
 			sourceTree = "<group>";
 		};
 		1956121C2A6809C8008DA8D1 /* Notification */ = {
@@ -584,7 +573,6 @@
 				195858742A5C324400A10E4D /* MessageView.swift in Sources */,
 				19AE6DE42A45372B00D027D6 /* MolotScreen.swift in Sources */,
 				19185E8A2A5E9FED00AD72F4 /* shimSkam.swift in Sources */,
-				194FBCA92A31B8FF007F3FF3 /* SettingScreen.swift in Sources */,
 				194FBCAB2A31BA3A007F3FF3 /* ChatScreen.swift in Sources */,
 				19AE6DE02A45319F00D027D6 /* BicepsScreen.swift in Sources */,
 				19E5F9912A434C9200294996 /* jimganScreen.swift in Sources */,

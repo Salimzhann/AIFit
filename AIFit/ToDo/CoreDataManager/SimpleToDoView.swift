@@ -147,16 +147,25 @@ struct SimpleToDoView: View {
                                 }
                         }
                     }.onDelete(perform: deleteTask)
-                    
+                        .simultaneousGesture(DragGesture().onChanged { _ in
+                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                        })
                 }
                 
                 
                 Spacer()
             }
+            .gesture(DragGesture().onChanged { _ in
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                })
             .padding()
             .navigationTitle("Все задачи")
             .navigationBarItems(trailing: EditButton())
         }
+    }
+    
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
 }

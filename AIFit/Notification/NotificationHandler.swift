@@ -49,29 +49,33 @@ class NotificationHandler{
         let randomQuote = motivationalQuotes[randomIndex]
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 14
-        dateComponents.minute = 8
+        dateComponents.hour = 10
+        dateComponents.minute = 44
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Мотивация дня!"
         content.body = randomQuote
         content.sound = UNNotificationSound.default
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(request )
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+        let date = Date()
+        UserDefaults.standard.setValue(date, forKey: "last-notification-set-date")
     }
     
     func sendNotificationMotiv(){
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 14
-        dateComponents.minute = 8
+        dateComponents.hour = 10
+        dateComponents.minute = 44
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Время пришло!"
         content.body = "У вас есть испытание, думаю вы продержались сегодня?"
         content.sound = UNNotificationSound.default
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(request)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+        let date = Date()
+        UserDefaults.standard.setValue(date, forKey: "last-notification-set-date")
     }
 }
 

@@ -88,9 +88,10 @@ struct ChatScreen: View {
                         scrollToBottom = false
                     }
                 }
-                .onTapGesture {
-                    hideKeyboard()
-                }
+                .gesture(DragGesture().onChanged { _ in
+                              // Handle the swipe gesture to hide the keyboard
+                              hideKeyboard()
+                          })
                 
                 if isTyping {
                     withAnimation(.easeInOut) {
@@ -139,6 +140,22 @@ struct ChatScreen: View {
                 .background(message.sender == .user ? Color.blue : Color.gray.opacity(0.3))
                 .cornerRadius(16)
                 .fixedSize(horizontal: false, vertical: true)
+                .contextMenu {
+                                Button(action: {
+                                    // Copy the message to clipboard
+                                    UIPasteboard.general.string = message.content
+                                }) {
+                                    Text("Copy")
+                                    Image(systemName: "doc.on.doc")
+                                }
+                                Button(action: {
+                                    // Delete the message
+                                    deleteMessage(message: message)
+                                }) {
+                                    Text("Delete")
+                                    Image(systemName: "trash")
+                                }
+                            }
             
             if message.sender == .gpt { Spacer() }
         }
@@ -182,7 +199,12 @@ struct ChatScreen: View {
     }
 
 
-
+    func deleteMessage(message: ChatMessage) {
+        withAnimation {
+            chatMessages.removeAll { $0.id == message.id }
+        }
+    }
+    
     func sendMessage() {
         lol = textViewValue
         let trimmedMessage = textViewValue.trimmingCharacters(in: .whitespacesAndNewlines)

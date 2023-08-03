@@ -36,23 +36,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
         
         private func scheduleDailyMotivationalNotification() {
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
             let notificationHandler = NotificationHandler()
-            let lastNotificationDate = UserDefaults.standard.object(forKey: "last-notification-set-date") as? Date
-            if let lastNotificationDate = lastNotificationDate {
-                let calendar = Calendar(identifier: .gregorian)
-                let lastNotificationDateComponents = calendar.dateComponents(in: .current, from: lastNotificationDate)
-                let currentDateComponents = calendar.dateComponents(in: .current, from: Date())
-                if lastNotificationDateComponents.day != currentDateComponents.day {
-                    notificationHandler.sendNotification()
-                    if( mainCh.challenge || mainCh.challenge1 || mainCh.challenge2 || mainCh.challenge3 || mainCh.challenge4 ){
-                        notificationHandler.sendNotificationMotiv()
-                    }
-                }
-            } else {
-                notificationHandler.sendNotification()
-                if( mainCh.challenge || mainCh.challenge1 || mainCh.challenge2 || mainCh.challenge3 || mainCh.challenge4 ){
-                    notificationHandler.sendNotificationMotiv()
-                }
+            notificationHandler.sendNotification()
+            if( mainCh.challenge || mainCh.challenge1 || mainCh.challenge2 || mainCh.challenge3 || mainCh.challenge4 ){
+                notificationHandler.sendNotificationMotiv()
             }
         }
     
@@ -61,7 +49,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     @objc private func refreshDaysAndCommits() {
+        UserDefaults.standard.set(0, forKey: "notifDay")
         if mainCh.challenge || mainCh.challenge1 || mainCh.challenge2 || mainCh.challenge3 || mainCh.challenge4 {
+            if days+1 == 7 {
+                isCompletedDays = [false,false,false,false,false,false,false]
+                UserDefaults.standard.set(isCompletedDays,forKey:"isCompletedDays")
+            }
             if(days+1 < 7){
                 days += 1
                 UserDefaults.standard.set(false, forKey: "incDay")
@@ -75,14 +68,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 UserDefaults.standard.set(false, forKey: "IsActive2")
                 UserDefaults.standard.set(false, forKey: "IsActive3")
                 UserDefaults.standard.set(false, forKey: "IsActive4")
-                isCompletedDays = [false,false,false,false,false,false,false]
-                UserDefaults.standard.set(isCompletedDays,forKey:"isCompletedDays")
-                UserDefaults.standard.set(false, forKey: "incDay")
-                UserDefaults.standard.set(0, forKey: "nextday")
             }
         }else{
+            days = 0
             UserDefaults.standard.set(false, forKey: "incDay")
-            UserDefaults.standard.set(0, forKey: "nextday")
+            UserDefaults.standard.set(days, forKey: "nextday")
         }
         UserDefaults.standard.set(0,forKey: "waterCounter")
     }

@@ -45,37 +45,43 @@ class NotificationHandler{
         }
     }
     func sendNotification(){
-        let randomIndex = Int.random(in: 0..<motivationalQuotes.count)
-        let randomQuote = motivationalQuotes[randomIndex]
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 44
+        dateComponents.hour = 8
+        dateComponents.minute = 10
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Мотивация дня!"
-        content.body = randomQuote
+        content.body = motivationalQuotes[Int.random(in: 0..<motivationalQuotes.count)]
         content.sound = UNNotificationSound.default
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
-        let date = Date()
-        UserDefaults.standard.setValue(date, forKey: "last-notification-set-date")
+        UNUserNotificationCenter.current().add(request){ error in
+            if let error = error {
+                print("Error scheduling notification: (error.localizedDescription)")
+            } else {
+                print("Notification scheduled successfully!")
+            }
+        }
     }
     
     func sendNotificationMotiv(){
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 44
+        dateComponents.hour = 20
+        dateComponents.minute = 10
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Время пришло!"
         content.body = "У вас есть испытание, думаю вы продержались сегодня?"
         content.sound = UNNotificationSound.default
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
-        let date = Date()
-        UserDefaults.standard.setValue(date, forKey: "last-notification-set-date")
+        UNUserNotificationCenter.current().add(request){ error in
+            if let error = error {
+                print("Error scheduling notification: (error.localizedDescription)")
+            } else {
+                print("Notification 1 scheduled successfully!")
+            }
+        }
     }
 }
 

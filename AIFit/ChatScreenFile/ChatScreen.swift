@@ -21,12 +21,12 @@ struct ViewHeightKey: PreferenceKey {
 struct ChatScreen: View {
     @State private var isTyping: Bool = false
     @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
-    @State var lol = ""
-    @State var kek = ""
-    @State var pip = ""
     @State var messageText: String = ""
     @State var cancellables = Set<AnyCancellable>()
     @State var listCount: Int = 0
+    @State var lol = ""
+      @State var kek = ""
+      @State var pip = ""
     @State var scrollToBottom: Bool = false
     @State var textViewValue = String()
     @State var textViewHeight: CGFloat = 50.0
@@ -207,56 +207,56 @@ struct ChatScreen: View {
     
     func sendMessage() {
         lol = textViewValue
-        let trimmedMessage = textViewValue.trimmingCharacters(in: .whitespacesAndNewlines)
-        if !trimmedMessage.isEmpty {
-            let myMessage = ChatMessage(id: UUID().uuidString, content: trimmedMessage, dataCreated: Date(), sender: .user)
-            chatMessages.append(myMessage)
-            textViewValue = "" // Clear the input text view
-            
-            // Show typing animation
-            isTyping = true
-            let prompt = pip + "\n" + kek + "\n" + lol
-            print(prompt)
-            let url = URL(string: "https://fastapi-3zy6.onrender.com/chat/")!
-            let requestData = ["prompt": prompt]
-            
-            let session = URLSession.shared
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.setValue("application/json", forHTTPHeaderField: "Accept")
-            
-            do {
-                let requestData = try JSONSerialization.data(withJSONObject: requestData, options: [])
-                request.httpBody = requestData
-            } catch {
-                print("Error encoding JSON: \(error)")
-                return
-            }
-            
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    print("Error: \(error)")
-                    return
-                }
-                
-                guard let data = data else {
-                    print("No data received")
-                    return
-                }
-                
-                if let responseString = String(data: data, encoding: .utf8) {
-                    // Remove quotes from the response string
-                    let cleanedResponseString = responseString.replacingOccurrences(of: "\"", with: "")
-                                                            .replacingOccurrences(of: "\\n", with: "\n")
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        // Hide typing animation and display bot message
-                        isTyping = false
-                        let botMessage = ChatMessage(id: UUID().uuidString, content: cleanedResponseString, dataCreated: Date(), sender: .gpt)
-                        chatMessages.append(botMessage)
-                        kek = botMessage.content
-                        pip = lol
+               let trimmedMessage = textViewValue.trimmingCharacters(in: .whitespacesAndNewlines)
+               if !trimmedMessage.isEmpty {
+                   let myMessage = ChatMessage(id: UUID().uuidString, content: trimmedMessage, dataCreated: Date(), sender: .user)
+                   chatMessages.append(myMessage)
+                   textViewValue = "" // Clear the input text view
+                   
+                   // Show typing animation
+                   isTyping = true
+                   let prompt = pip + "\n" + kek + "\n" + lol
+                   print(prompt)
+                   let url = URL(string: "https://fastapi-3zy6.onrender.com/chat/")!
+                   let requestData = ["prompt": prompt]
+                   
+                   let session = URLSession.shared
+                   var request = URLRequest(url: url)
+                   request.httpMethod = "POST"
+                   request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                   request.setValue("application/json", forHTTPHeaderField: "Accept")
+                   
+                   do {
+                       let requestData = try JSONSerialization.data(withJSONObject: requestData, options: [])
+                       request.httpBody = requestData
+                   } catch {
+                       print("Error encoding JSON: \(error)")
+                       return
+                   }
+                   
+                   URLSession.shared.dataTask(with: request) { data, response, error in
+                       if let error = error {
+                           print("Error: \(error)")
+                           return
+                       }
+                       
+                       guard let data = data else {
+                           print("No data received")
+                           return
+                       }
+                       
+                       if let responseString = String(data: data, encoding: .utf8) {
+                           // Remove quotes from the response string
+                           let cleanedResponseString = responseString.replacingOccurrences(of: "\"", with: "")
+                                                                   .replacingOccurrences(of: "\\n", with: "\n")
+                           
+                           DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                               // Hide typing animation and display bot message
+                               isTyping = false
+                               let botMessage = ChatMessage(id: UUID().uuidString, content: cleanedResponseString, dataCreated: Date(), sender: .gpt)
+                               chatMessages.append(botMessage)
+                               kek = botMessage.content
+                               pip = lol
                     }
                 } else {
                     print("Failed to convert response data to string")

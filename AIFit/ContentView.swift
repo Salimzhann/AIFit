@@ -14,19 +14,19 @@ struct ContentView: View {
                    TabView {
                        MainPage()
                            .tabItem {
-                               Label("Menu", systemImage: "house")
+                               Label("Меню", systemImage: "house")
                            }
                        ChatScreen()
                            .tabItem {
-                               Label("Chat", systemImage: "ellipsis.bubble")
+                               Label("Чат", systemImage: "ellipsis.bubble")
                            }
                        ExercisesScreen()
                            .tabItem {
-                               Label("Guide", systemImage: "book")
+                               Label("Гайд", systemImage: "book")
                            }
                        SimpleToDoView()
                            .tabItem{
-                               Label("List", systemImage: "list.bullet.clipboard")
+                               Label("Лист", systemImage: "list.bullet.clipboard")
                            }
                    }
                    .accentColor(Color.red)

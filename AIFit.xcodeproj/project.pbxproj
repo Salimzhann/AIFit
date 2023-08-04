@@ -47,7 +47,6 @@
 		195858782A5C327900A10E4D /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195858772A5C327900A10E4D /* ContentMessageView.swift */; };
 		1958587A2A5C329600A10E4D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195858792A5C329500A10E4D /* ViewExtension.swift */; };
 		1958587C2A5C32C700A10E4D /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958587B2A5C32C700A10E4D /* KeyboardResponder.swift */; };
-		1958587E2A5C32DA00A10E4D /* ChatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958587D2A5C32DA00A10E4D /* ChatHelper.swift */; };
 		19637CEB2A70A95800A18927 /* SimpleToDoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19637CE92A70A95800A18927 /* SimpleToDoModel.xcdatamodeld */; };
 		19637CEE2A70AA1800A18927 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19637CED2A70AA1800A18927 /* CoreDataManager.swift */; };
 		19637CF02A70AB2500A18927 /* SimpleToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19637CEF2A70AB2500A18927 /* SimpleToDoView.swift */; };
@@ -75,6 +74,7 @@
 		19AE6DE62A45399E00D027D6 /* SgipshScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6DE52A45399E00D027D6 /* SgipshScreen.swift */; };
 		19AE6DE82A453BF400D027D6 /* SgipBlockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6DE72A453BF400D027D6 /* SgipBlockScreen.swift */; };
 		19AE6DEA2A453EFC00D027D6 /* SgipSidyaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6DE92A453EFC00D027D6 /* SgipSidyaScreen.swift */; };
+		19CFF9002A7BCD8B00831CB4 /* ChatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CFF8FF2A7BCD8B00831CB4 /* ChatHelper.swift */; };
 		19D383482A5A8DF700162925 /* ChallengesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D383472A5A8DF600162925 /* ChallengesPage.swift */; };
 		19E5F9912A434C9200294996 /* jimganScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5F9902A434C9200294996 /* jimganScreen.swift */; };
 		19FBD3CF2A41AE6A00A17A96 /* ChestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBD3CE2A41AE6A00A17A96 /* ChestScreen.swift */; };
@@ -141,7 +141,6 @@
 		195858772A5C327900A10E4D /* ContentMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageView.swift; sourceTree = "<group>"; };
 		195858792A5C329500A10E4D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		1958587B2A5C32C700A10E4D /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
-		1958587D2A5C32DA00A10E4D /* ChatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelper.swift; sourceTree = "<group>"; };
 		19637CEA2A70A95800A18927 /* SimpleToDoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleToDoModel.xcdatamodel; sourceTree = "<group>"; };
 		19637CED2A70AA1800A18927 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		19637CEF2A70AB2500A18927 /* SimpleToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleToDoView.swift; sourceTree = "<group>"; };
@@ -169,6 +168,7 @@
 		19AE6DE52A45399E00D027D6 /* SgipshScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SgipshScreen.swift; sourceTree = "<group>"; };
 		19AE6DE72A453BF400D027D6 /* SgipBlockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SgipBlockScreen.swift; sourceTree = "<group>"; };
 		19AE6DE92A453EFC00D027D6 /* SgipSidyaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SgipSidyaScreen.swift; sourceTree = "<group>"; };
+		19CFF8FF2A7BCD8B00831CB4 /* ChatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelper.swift; sourceTree = "<group>"; };
 		19D383472A5A8DF600162925 /* ChallengesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesPage.swift; sourceTree = "<group>"; };
 		19E5F9902A434C9200294996 /* jimganScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jimganScreen.swift; sourceTree = "<group>"; };
 		19FBD3CE2A41AE6A00A17A96 /* ChestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestScreen.swift; sourceTree = "<group>"; };
@@ -341,7 +341,7 @@
 				195858772A5C327900A10E4D /* ContentMessageView.swift */,
 				195858792A5C329500A10E4D /* ViewExtension.swift */,
 				1958587B2A5C32C700A10E4D /* KeyboardResponder.swift */,
-				1958587D2A5C32DA00A10E4D /* ChatHelper.swift */,
+				19CFF8FF2A7BCD8B00831CB4 /* ChatHelper.swift */,
 				1958586F2A5C2D2200A10E4D /* ResizableTextView.swift */,
 			);
 			path = ChatScreenFile;
@@ -578,6 +578,7 @@
 				19E5F9912A434C9200294996 /* jimganScreen.swift in Sources */,
 				1956121E2A6809E2008DA8D1 /* NotificationHandler.swift in Sources */,
 				19FBD3CF2A41AE6A00A17A96 /* ChestScreen.swift in Sources */,
+				19CFF9002A7BCD8B00831CB4 /* ChatHelper.swift in Sources */,
 				1913A21B2A5F90C70092F12A /* francezhimgan.swift in Sources */,
 				197B02C12A5ED91100524BB2 /* sgipSkot.swift in Sources */,
 				1913A2212A5F9C750092F12A /* IzzaHead.swift in Sources */,
@@ -611,7 +612,6 @@
 				19185E8C2A5EA44500AD72F4 /* armZhim.swift in Sources */,
 				192D84552A459A6A009B2101 /* LegsScreen.swift in Sources */,
 				19AE6DDB2A452A2600D027D6 /* tyagaHighBlockScreen.swift in Sources */,
-				1958587E2A5C32DA00A10E4D /* ChatHelper.swift in Sources */,
 				19AE6DCE2A447ECA00D027D6 /* otvrukScreen.swift in Sources */,
 				1900D43F2A431D38009EF595 /* pushupScreen.swift in Sources */,
 				194FBC7D2A319626007F3FF3 /* AIFitApp.swift in Sources */,

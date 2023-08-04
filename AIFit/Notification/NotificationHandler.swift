@@ -47,8 +47,8 @@ class NotificationHandler{
     func sendNotification(){
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 8
-        dateComponents.minute = 10
+        dateComponents.hour = 18
+        dateComponents.minute = 0
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Мотивация дня!"
@@ -67,8 +67,8 @@ class NotificationHandler{
     func sendNotificationMotiv(){
         var trigger: UNNotificationTrigger?
         var dateComponents = DateComponents()
-        dateComponents.hour = 20
-        dateComponents.minute = 10
+        dateComponents.hour = 18
+        dateComponents.minute = 0
         trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "Время пришло!"

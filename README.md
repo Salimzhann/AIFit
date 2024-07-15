@@ -16,10 +16,11 @@ Positive User Feedback: Received commendations for the app's intuitive design, e
 ## Screenshots
 
 <img width="863" alt="Снимок экрана 2024-07-15 в 14 45 52" src="https://github.com/user-attachments/assets/30d2ec92-b3fb-4bc4-92db-936547794860">
-![simulator_screenshot_DF9B26DF-AF13-4C8E-AE95-CAAF8A5FE9B9](https://github.com/user-attachments/assets/af2a89cc-17af-4c5e-abef-556897078ef0)
-![simulator_screenshot_B671B411-6853-4914-BB5F-8A6B3A567471](https://github.com/user-attachments/assets/761a8d83-e273-496a-a5d1-869a2dd416c7)
-![simulator_screenshot_29AB8ED1-F79F-4372-B2B2-0B89C30C25D5](https://github.com/user-attachments/assets/583497cd-a8db-4ac8-863c-8a024397de14)
-![simulator_screenshot_FBCD0079-C72B-4EF0-BCAF-B387A55D79AA](ht![simulator_screenshot_E1D3F1C4-9159-474A-8E5E-0BB43D2F5DF4](https://github.com/user-attachments/assets/91b9c840-6d48-4604-bd28-95a8c96fb3b6)
-tps://github.com/user-attachments/assets/3045bb9a-e131-4926-95ed-ee317575c601)
-![simulator_screenshot_F444261E-30DB-46CC-B94F-8A2524CE7523](https://github.com/user-attachments/assets/2ae90627-7293-4e65-a920-8f9a10ebca86)
+![Screenshot 1](https://github.com/user-attachments/assets/af2a89cc-17af-4c5e-abef-556897078ef0 =400x258)
+![Screenshot 2](https://github.com/user-attachments/assets/761a8d83-e273-496a-a5d1-869a2dd416c7 =400x258)
+![Screenshot 3](https://github.com/user-attachments/assets/583497cd-a8db-4ac8-863c-8a024397de14 =400x258)
+![Screenshot 4](https://github.com/user-attachments/assets/3045bb9a-e131-4926-95ed-ee317575c601 =400x258)
+![Screenshot 5](https://github.com/user-attachments/assets/91b9c840-6d48-4604-bd28-95a8c96fb3b6 =400x258)
+![Screenshot 6](https://github.com/user-attachments/assets/2ae90627-7293-4e65-a920-8f9a10ebca86 =400x258)
+![Screenshot 7](https://github.com/user-attachments/assets/3986f5c2-5d4e-4b19-bf82-e99c5b2d64aa =400x258)
 <img width="219" alt="Снимок экрана 2024-07-15 в 14 49 51" src="https://github.com/user-attachments/assets/3986f5c2-5d4e-4b19-bf82-e99c5b2d64aa">
